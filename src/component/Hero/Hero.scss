@@ -1,0 +1,164 @@
+@import "../../index.scss";
+
+// background: linear-gradient(
+//   0deg,
+//   rgba(255, 255, 255, 1) 0%,
+//   rgba(52, 58, 218, 1) 28%
+// );
+// -webkit-text-fill-color: transparent;
+// -webkit-background-clip: text;
+
+.Hero__mainWrapper {
+  height: 100dvh;
+  background-image: url(../../assets/images/heroBg.png);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .Hero__textMainWrapper {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Hero__textWrapper {
+      width: 80%;
+      
+
+      h1 {
+        text-shadow: 1.5px 1.5px 2px #000;
+        font-size: 8rem;
+        font-family: $fontTwo;
+        font-weight: 500;
+        line-height: 8rem;
+       
+
+        .unwealth__textColor {
+          text-shadow: 1.5px 1.5px 2px rgba(211, 141, 26, 1);
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(211, 141, 26, 1) 28%
+          );
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+        .magazine__textColor {
+          text-shadow: 1.5px 1.5px 2px rgba(52, 58, 218, 1);
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(52, 58, 218, 1) 28%
+          );
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+      }
+      .small__informationPara {
+        font-weight: 500;
+        font-family: $fontOne;
+        font-size: 1.4rem;
+        margin: 15px 0;
+        text-shadow: 0.3px 0.3px 0.2px#000000;
+      }
+
+      .subscribeAndArrowBtn__Wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+
+        .subscribeNow__Btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 20px;
+          border: none;
+          outline: none;
+          border-radius: 7px;
+          font-weight: 700;
+          font-family: $fontOne;
+          font-size: 1.7rem;
+          cursor: pointer;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          background-color: $colorOne;
+          transition: 0.3s ease-out;
+
+          img {
+            width: 0px;
+            transition: 0.3s ease-in-out;
+          }
+          &:hover img {
+            width: 15px;
+          }
+          &:hover {
+            color: $colorFour;
+            box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 5px 2px inset;
+          }
+        }
+        .moveToNewSec__Btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          transition: 0.5s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 1.5px 1.5px 8px 2px inset;
+          }
+        }
+      }
+    }
+  }
+
+  .Hero__sliderMainWrapper {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+
+    .sliderImgs__mainWrapper {
+      width: 97%;
+      height: 80%;      
+      display: flex;
+
+      .sliderImgs__Wrapper {
+        width: 100%;
+        height: 100%;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        img {
+          width: 40%;
+          height: 70%;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right {
+  background-image: none !important;
+}

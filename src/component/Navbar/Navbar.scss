@@ -1,0 +1,58 @@
+@import "../../index.scss";
+
+.Navbar__mainWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+
+
+  .Navbar__LogoWrapper{
+    img{
+        width:160px;
+        height: auto;
+    }
+  }
+  
+
+  .Navbar__navLinksWrapper {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      li {
+        list-style: none;
+        font-family: $fontOne;
+        font-weight: 500;
+        font-size: 1.7rem;
+        padding: 10px;
+        border-radius: 8px;
+        transition: 0.2s ease-in;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 2px 2px 6px 3px $colorOne inset;
+        }
+      }
+    }
+  }
+
+  .Navbar__LoginBtn {
+    background-color: $colorOne;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    outline: none;
+    border-radius: 7px;
+    font-family: $fontOne;
+    cursor: pointer;
+  }
+}

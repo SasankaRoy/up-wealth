@@ -1,0 +1,100 @@
+@import "../../index.scss";
+
+.About__mainWrapper {
+  height: 100dvh;
+  position: relative;
+  background-color: $colorOne;
+//   margin-top: 50px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  .About__BgImg {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: top;
+  }
+  .About__contentMainWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .AboutUs__imgWrapper {
+      img {
+        width: 226px;
+      }
+    }
+    .About__contextMainWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0px;
+      width: 85%;
+      background-color: $colorOne;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      .About__contentWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 15px;
+
+        .About__contentLeftWrapper {
+          flex: 1;
+          h3 {
+            font-size: 2.7rem;
+            font-family: $fontTwo;
+            font-weight: 500;
+            color: $colorFour;
+          }
+          h2 {
+            font-size: 3.4rem;
+            font-family: $fontOne;
+            font-weight: 800;
+            color: black;
+          }
+        }
+        .About__contentRightWrapper {
+          flex: 2;
+          border-left: 1px solid gray;
+          padding: 30px;
+          p {
+            font-size: 1.6rem;
+            font-family: $fontOne;
+            font-weight: 500;
+            line-height: 23px;
+          }
+        }
+      }
+      .moveToNewSec__Btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.24) 1.5px 1.5px 8px 2px inset;
+        }
+      }
+    }
+  }
+}
