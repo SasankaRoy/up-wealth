@@ -20,7 +20,7 @@ const About = () => {
         }}
         transition={{
           duration: 1.5,
-          ease: "backIn",
+          ease: "backOut",
           delay: 0.5,
         }}
         className="About__BgImg"

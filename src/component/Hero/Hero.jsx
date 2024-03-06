@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./Hero.scss";
 // import gsap from "gsap";
 
@@ -36,6 +36,9 @@ const ImageSlider = () => {
 
   const handleMoveEnter = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+      swiperRef.current.swiper.slideNext();
+      swiperRef.current.swiper.slideNext();
       swiperRef.current.swiper.slideNext();
     }
   };
@@ -101,7 +104,7 @@ const Hero = () => {
             id="Hero__heading"
           >
             Discover the latest issue of{" "}
-            <span className="unwealth__textColor">unwealth</span>{" "}
+            <span className="unwealth__textColor">upwealth</span>{" "}
             <span className="magazine__textColor">magazine</span>
           </motion.h1>
           <motion.p
@@ -134,20 +137,20 @@ const Hero = () => {
             transition={{
               duration: 1.3,
               ease: "backOut",
-              damping:300
+              damping: 300,
             }}
             className="subscribeAndArrowBtn__Wrapper"
           >
             <button
               className="subscribeNow__Btn"
-              aria-description="subscribe-now-button"
+              // aria-description="subscribe-now-button"
             >
               Subscribe Now!
               <img src={subscribeHoverIcon} alt="subscribeHoverIcon" />
             </button>
             <button
               className="moveToNewSec__Btn"
-              aria-description="move-to-the-next-section-button"
+              // aria-description="move-to-the-next-section-button"
             >
               <img src={DownArrowIcon} alt="downArrowIcon" />
             </button>
