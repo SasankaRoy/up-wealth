@@ -30,8 +30,16 @@
     align-items: center;
 
     .AboutUs__imgWrapper {
+      position: relative;
       img {
         width: 226px;
+      }
+      .hidden__Cards {
+        position: absolute;
+        width: 130px;
+        top: 25%;
+        left: 20%;
+        z-index: -1;
       }
     }
     .About__contextMainWrapper {

@@ -1,13 +1,49 @@
 import React from "react";
 import "./About.scss";
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 
 import AboutBgImg from "../../assets/images/aboutBg.png";
 import AboutUsImg from "../../assets/images/aboutUsImg.png";
 import DownArrowIcon from "../../assets/images/downArrowIcon.png";
 import AboutDivider from "../../assets/images/AboutDivider.png";
+import SliderImg1 from "../../assets/images/sliderImg2.png";
+import SliderImg2 from "../../assets/images/sliderImg3.png";
+import SliderImg3 from "../../assets/images/sliderImg5.png";
+import SliderImg4 from "../../assets/images/sliderImg6.png";
 
 const About = () => {
+  const [scope, animate] = useAnimate();
+
+  const handleMouseEnter = async () => {
+    // rotate the main-card
+    animate("#mainCard", {
+      rotateY: "25deg",
+    });
+    // for transforming the cards...
+    animate(".hidden__Card1", {
+      x: -550,
+      y: 50,
+    });
+    animate(".hidden__Card2", {
+      x: -300,
+      y: -100,
+    });
+    animate(".hidden__Card3", {
+      x: 300,
+      y: -100,
+    });
+    await animate(".hidden__Card4", {
+      x: 550,
+      y: 50,
+    });
+
+    // for rotate the cards...
+    animate(".hidden__Card1", { rotateZ: "5deg" });
+    animate(".hidden__Card2", { rotateZ: "-10deg" });
+    animate(".hidden__Card3", { rotateZ: "-10deg" });
+    animate(".hidden__Card4", { rotateZ: "10deg" });
+  };
+
   return (
     <div className="About__mainWrapper">
       <motion.img
@@ -29,8 +65,9 @@ const About = () => {
         alt="about__bgImg"
       />
       <div className="About__contentMainWrapper">
-        <div className="AboutUs__imgWrapper">
+        <div ref={scope} className="AboutUs__imgWrapper">
           <motion.img
+            id="mainCard"
             initial={{
               scale: 100,
               opacity: 0,
@@ -43,8 +80,35 @@ const About = () => {
               duration: 0.8,
               ease: "linear",
             }}
+            viewport={{ once: true }}
+            onMouseEnter={handleMouseEnter}
             src={AboutUsImg}
             alt="AboutBgImg"
+          />
+
+          <motion.img
+            initial={{ rotateZ: "20deg" }}
+            src={SliderImg1}
+            className="hidden__Cards hidden__Card1"
+            alt="hidden-card1"
+          />
+          <motion.img
+            initial={{ rotateZ: "40deg" }}
+            src={SliderImg2}
+            className="hidden__Cards hidden__Card2"
+            alt="hidden-card2"
+          />
+          <motion.img
+            initial={{ rotateZ: "-20deg" }}
+            src={SliderImg3}
+            className="hidden__Cards hidden__Card3"
+            alt="hidden-card3"
+          />
+          <motion.img
+            initial={{ rotateZ: "-40deg" }}
+            src={SliderImg4}
+            className="hidden__Cards hidden__Card4"
+            alt="hidden-card4"
           />
         </div>
         <motion.div
