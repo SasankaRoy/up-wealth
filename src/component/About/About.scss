@@ -4,7 +4,7 @@
   height: 100dvh;
   position: relative;
   background-color: $colorOne;
-//   margin-top: 50px;
+  margin-top: 10px;
   overflow-y: hidden;
   overflow-x: hidden;
 
@@ -54,6 +54,7 @@
 
         .About__contentLeftWrapper {
           flex: 1;
+          position: relative;
           h3 {
             font-size: 2.7rem;
             font-family: $fontTwo;
@@ -66,10 +67,15 @@
             font-weight: 800;
             color: black;
           }
+          img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 200px;
+          }
         }
         .About__contentRightWrapper {
           flex: 2;
-          border-left: 1px solid gray;
           padding: 30px;
           p {
             font-size: 1.6rem;
@@ -88,11 +94,61 @@
         border-radius: 50%;
         border: none;
         outline: none;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: 10px 10px 20px #e2e2e4, -10px -10px 20px #ffffff;
         transition: 0.5s ease-in-out;
         cursor: pointer;
         &:hover {
-          box-shadow: rgba(0, 0, 0, 0.24) 1.5px 1.5px 8px 2px inset;
+          box-shadow: inset 10px 10px 20px #e2e2e4,
+            inset -10px -10px 20px #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .About__mainWrapper {
+    .About__contentMainWrapper {
+      // image wrapper
+      .AboutUs__imgWrapper {
+        img {
+          width: 430px;
+        }
+      }
+      // content wrapper
+      .About__contextMainWrapper {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        .About__contentWrapper {
+          padding: 25px;
+
+          .About__contentLeftWrapper {
+            flex: 1;
+            h3 {
+              font-size: 3.7rem;
+            }
+            h2 {
+              font-size: 5.5rem;
+            }
+            img {
+              height: 300px;
+            }
+          }
+          .About__contentRightWrapper {
+            flex: 2;
+            padding: 30px;
+            p {
+              font-size: 2.6rem;
+              line-height: 37px;
+            }
+          }
+        }
+        .moveToNewSec__Btn {
+          width: 75px;
+          height: 75px;
+          img {
+            width: 34px;
+          }
         }
       }
     }

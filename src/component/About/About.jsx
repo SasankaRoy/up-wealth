@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import AboutBgImg from "../../assets/images/aboutBg.png";
 import AboutUsImg from "../../assets/images/aboutUsImg.png";
 import DownArrowIcon from "../../assets/images/downArrowIcon.png";
+import AboutDivider from "../../assets/images/AboutDivider.png";
 
 const About = () => {
   return (
@@ -46,19 +47,26 @@ const About = () => {
             alt="AboutBgImg"
           />
         </div>
-              <motion.div initial={{
-                  y: 100,
-                  opacity:0
-              }} whileInView={{
-            y:0, opacity:1
-                  }} transition={{
-                      duration: .9,
-                      ease:'easeInOut',
-        }} className="About__contextMainWrapper">
+        <motion.div
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.9,
+            ease: "easeInOut",
+          }}
+          className="About__contextMainWrapper"
+        >
           <div className="About__contentWrapper">
             <div className="About__contentLeftWrapper">
               <h3>About us</h3>
               <h2>Grow your net worth by growing your network.</h2>
+              <img src={AboutDivider} alt="about_dividerImg" />
             </div>
             <div className="About__contentRightWrapper">
               <p>
