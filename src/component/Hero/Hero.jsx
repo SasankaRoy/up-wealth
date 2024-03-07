@@ -104,7 +104,7 @@ const Hero = () => {
             id="Hero__heading"
           >
             Discover the latest issue of{" "}
-            <span className="unwealth__textColor">upwealth</span>{" "}
+            <span className="upwealth__textColor">upwealth</span>{" "}
             <span className="magazine__textColor">magazine</span>
           </motion.h1>
           <motion.p

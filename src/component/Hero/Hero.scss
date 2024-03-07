@@ -1,17 +1,10 @@
 @import "../../index.scss";
 
-// background: linear-gradient(
-//   0deg,
-//   rgba(255, 255, 255, 1) 0%,
-//   rgba(52, 58, 218, 1) 28%
-// );
-// -webkit-text-fill-color: transparent;
-// -webkit-background-clip: text;
-
 .Hero__mainWrapper {
   height: 100dvh;
   background-image: url(../../assets/images/heroBg.png);
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,32 +21,32 @@
 
     .Hero__textWrapper {
       width: 80%;
-      
 
       h1 {
-        text-shadow: 1.5px 1.5px 2px #000;
+        text-shadow: 1.1px 1.1px 1px #000;
         font-size: 8rem;
         font-family: $fontTwo;
-        font-weight: 200;
+        font-weight: 100;
         line-height: 8rem;
-       
 
-        .unwealth__textColor {
-          text-shadow: 1.5px 1.5px 2px rgba(211, 141, 26, 1);
+        .upwealth__textColor {
+          text-shadow: none;
+          background: rgb(240, 240, 243);
           background: linear-gradient(
             0deg,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(211, 141, 26, 1) 28%
+            rgba(240, 240, 243, 1) 24%,
+            rgba(211, 141, 26, 1) 52%
           );
           -webkit-text-fill-color: transparent;
           -webkit-background-clip: text;
         }
         .magazine__textColor {
-          text-shadow: 1.5px 1.5px 2px rgba(52, 58, 218, 1);
+          text-shadow: none !important;
+          background: rgb(240, 240, 243);
           background: linear-gradient(
             0deg,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(52, 58, 218, 1) 28%
+            rgba(240, 240, 243, 1) 24%,
+            rgba(52, 58, 218, 1) 52%
           );
           -webkit-text-fill-color: transparent;
           -webkit-background-clip: text;
@@ -87,9 +80,9 @@
           font-family: $fontOne;
           font-size: 1.7rem;
           cursor: pointer;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           background-color: $colorOne;
           transition: 0.3s ease-out;
+          box-shadow: 10px 10px 20px #e2e2e4, -10px -10px 20px #ffffff;
 
           img {
             width: 0px;
@@ -100,7 +93,13 @@
           }
           &:hover {
             color: $colorFour;
-            box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 5px 2px inset;
+
+            box-shadow: inset 10px 10px 20px #e2e2e4,
+              inset -10px -10px 20px #ffffff;
+
+            // box-shadow: 2px 2px 10px 0 $colorOne inset,
+            //   1px 1px 10px 0 $colorOne inset;
+            // box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 5px 2px inset;
           }
         }
         .moveToNewSec__Btn {
@@ -112,11 +111,12 @@
           border-radius: 50%;
           border: none;
           outline: none;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          transition: 0.5s ease-in-out;
+          box-shadow: 10px 10px 20px #e2e2e4, -10px -10px 20px #ffffff;
+          transition: all 0.5s ease-in-out;
           cursor: pointer;
           &:hover {
-            box-shadow: rgba(0, 0, 0, 0.24) 1.5px 1.5px 8px 2px inset;
+            box-shadow: inset 10px 10px 20px #e2e2e4,
+              inset -10px -10px 20px #ffffff;
           }
         }
       }
@@ -133,12 +133,12 @@
 
     .sliderImgs__mainWrapper {
       width: 97%;
-      height: 80%;      
+      height: 80%;
       display: flex;
 
       .sliderImgs__Wrapper {
         width: 100%;
-        height: 100%;        
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -159,6 +159,58 @@
     }
   }
 }
-.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right {
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
   background-image: none !important;
+}
+
+@media (min-width: 1920px) {
+  .Hero__mainWrapper {
+    .Hero__textMainWrapper {
+      .Hero__textWrapper {
+        h1 {
+          font-size: 13rem;
+          line-height: 13rem;
+        }
+        .small__informationPara {
+          font-size: 2.4rem;
+        }
+        .subscribeAndArrowBtn__Wrapper {
+          gap: 30px;
+
+          .subscribeNow__Btn {
+            gap: 15px;
+            padding: 15px 20px;
+            font-size: 2.7rem;
+
+            img {
+              width: 0px;
+              transition: 0.3s ease-in-out;
+            }
+            &:hover img {
+              width: 25px;
+            }
+            &:hover {
+              color: $colorFour;
+            }
+          }
+          .moveToNewSec__Btn {
+            width: 75px;
+            height: 75px;
+            img {
+              width: 34px;
+            }
+          }
+        }
+      }
+    }
+
+    .Hero__sliderMainWrapper {
+      .sliderImgs__mainWrapper {
+        width: 85%;
+        height: 65%;
+        display: flex;
+      }
+    }
+  }
 }

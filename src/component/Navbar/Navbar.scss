@@ -11,14 +11,12 @@
   width: 100%;
   z-index: 999999;
 
-
-  .Navbar__LogoWrapper{
-    img{
-        width:160px;
-        height: auto;
+  .Navbar__LogoWrapper {
+    img {
+      width: 160px;
+      height: auto;
     }
   }
-  
 
   .Navbar__navLinksWrapper {
     ul {
@@ -37,7 +35,9 @@
         transition: 0.2s ease-in;
         cursor: pointer;
         &:hover {
-          box-shadow: 2px 2px 6px 3px $colorOne inset;
+          // box-shadow: inset 10px 10px 20px #e2e2e4,
+          //   inset -10px -10px 20px #ffffff;
+          box-shadow: inset 5px 5px 10px #dfdfe2, inset -5px -5px 10px #ffffff;
         }
       }
     }
@@ -49,10 +49,46 @@
     font-weight: 600;
     border: none;
     padding: 10px 25px;
+    box-shadow: 5px 5px 10px #dfdfe2, -5px -5px 10px #ffffff;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     outline: none;
     border-radius: 7px;
     font-family: $fontOne;
     cursor: pointer;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) ease-in-out;
+
+    &:hover {
+      box-shadow: inset 5px 5px 10px #dfdfe2, inset -5px -5px 10px #ffffff;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .Navbar__mainWrapper {
+    padding: 30px 0px;
+
+    .Navbar__LogoWrapper {
+      img {
+        width: 240px;
+        height: auto;
+      }
+    }
+
+    .Navbar__navLinksWrapper {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        li {
+          font-size: 2.7rem;
+        }
+      }
+    }
+    .Navbar__LoginBtn {
+      font-size: 2.7rem;
+      padding: 15px 30px;
+    }
   }
 }
