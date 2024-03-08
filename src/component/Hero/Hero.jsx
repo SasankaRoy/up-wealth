@@ -61,7 +61,12 @@ const ImageSlider = () => {
         className="sliderImgs__Wrapper"
       >
         {sliderImageList.map((cur, id) => (
-          <SwiperSlide key={id} onMouseOver={handleMoveEnter}>
+          <SwiperSlide
+            className={`slider__ImageWrapper slider__Image_${id++}`}
+            key={id}
+            onMouseOver={handleMoveEnter}
+          >
+            {console.log(id)}
             <img className="slider__CardImage" src={cur} alt="sliderImgs" />
           </SwiperSlide>
         ))}

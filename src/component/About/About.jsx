@@ -14,6 +14,22 @@ import SliderImg4 from "../../assets/images/sliderImg6.png";
 const About = () => {
   const [scope, animate] = useAnimate();
 
+  // for card-one...
+  const xPositionC1 = window.innerWidth > 1920 ? -912 : -550;
+  const yPositionC1 = window.innerWidth > 1920 ? 224 : 50;
+
+  // for card-two...
+  const xPositionC2 = window.innerWidth > 1920 ? -560 : -300;
+  const yPositionC2 = window.innerWidth > 1920 ? -55 : -100;
+
+  // for card-three...
+  const xPositionC3 = window.innerWidth > 1920 ? 645 : 300;
+  const yPositionC3 = window.innerWidth > 1920 ? -55 : -100;
+
+  // for card-four...
+  const xPositionC4 = window.innerWidth > 1920 ? 960 : 550;
+  const yPositionC4 = window.innerWidth > 1920 ? 224 : 50;
+
   const handleMouseEnter = async () => {
     // rotate the main-card
     animate("#mainCard", {
@@ -21,20 +37,20 @@ const About = () => {
     });
     // for transforming the cards...
     animate(".hidden__Card1", {
-      x: -550,
-      y: 50,
+      x: xPositionC1,
+      y: yPositionC1,
     });
     animate(".hidden__Card2", {
-      x: -300,
-      y: -100,
+      x: xPositionC2,
+      y: yPositionC2,
     });
     animate(".hidden__Card3", {
-      x: 300,
-      y: -100,
+      x: xPositionC3,
+      y: yPositionC3,
     });
     await animate(".hidden__Card4", {
-      x: 550,
-      y: 50,
+      x: xPositionC4,
+      y: yPositionC4,
     });
 
     // for rotate the cards...
@@ -88,7 +104,7 @@ const About = () => {
 
           <motion.img
             initial={{ rotateZ: "20deg" }}
-            src={SliderImg1}
+            src={SliderImg3}
             className="hidden__Cards hidden__Card1"
             alt="hidden-card1"
           />
@@ -100,7 +116,7 @@ const About = () => {
           />
           <motion.img
             initial={{ rotateZ: "-20deg" }}
-            src={SliderImg3}
+            src={SliderImg1}
             className="hidden__Cards hidden__Card3"
             alt="hidden-card3"
           />

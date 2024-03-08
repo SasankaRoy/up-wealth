@@ -18,19 +18,21 @@ const Navbar = () => {
         duration: 0.9,
         ease: "backOut",
       }}
-      className="Navbar__mainWrapper"
+      className="Navbar__outerWrapper"
     >
-      <div className="Navbar__LogoWrapper">
-        <img src={Logo} alt="logo" aria-description="company-logo" />
+      <div className="Navbar__mainWrapper">
+        <div className="Navbar__LogoWrapper">
+          <img src={Logo} alt="logo" aria-description="company-logo" />
+        </div>
+        <div className="Navbar__navLinksWrapper">
+          <ul>
+            {["Home", "Contact Us"].map((cur, id) => (
+              <li key={id}>{cur}</li>
+            ))}
+          </ul>
+        </div>
+        <button className="Navbar__LoginBtn">Log In</button>
       </div>
-      <div className="Navbar__navLinksWrapper">
-        <ul>
-          {["Home", "Contact Us"].map((cur, id) => (
-            <li key={id}>{cur}</li>
-          ))}
-        </ul>
-      </div>
-      <button className="Navbar__LoginBtn">Log In</button>
     </motion.nav>
   );
 };

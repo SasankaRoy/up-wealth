@@ -28,15 +28,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 
     .AboutUs__imgWrapper {
       position: relative;
-      img {
-        width: 226px;
+      #mainCard {
+        width: 210px;
+      }
+      .hidden__Card1 {
+        --translateX: -550;
+        --translateY: 50;
+        --opacity: 1;
       }
       .hidden__Cards {
         position: absolute;
-        width: 130px;
+        width: 120px;
         top: 25%;
         left: 20%;
         z-index: -1;
@@ -119,8 +125,11 @@
     .About__contentMainWrapper {
       // image wrapper
       .AboutUs__imgWrapper {
-        img {
+        #mainCard {
           width: 430px;
+        }
+        .hidden__Cards {
+          width: 170px;
         }
       }
       // content wrapper

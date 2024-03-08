@@ -1,64 +1,67 @@
 @import "../../index.scss";
 
-.Navbar__mainWrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.Navbar__outerWrapper {
+  width: 100dvw;
   padding: 20px 10px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 999999;
-
-  .Navbar__LogoWrapper {
-    img {
-      width: 160px;
-      height: auto;
+  .Navbar__mainWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    .Navbar__LogoWrapper {
+      img {
+        width: 160px;
+        height: auto;
+      }
     }
-  }
 
-  .Navbar__navLinksWrapper {
-    ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+    .Navbar__navLinksWrapper {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
 
-      li {
-        list-style: none;
-        font-family: $fontOne;
-        font-weight: 500;
-        font-size: 1.7rem;
-        padding: 10px;
-        border-radius: 8px;
-        transition: 0.2s ease-in;
-        cursor: pointer;
-        &:hover {
-          // box-shadow: inset 10px 10px 20px #e2e2e4,
-          //   inset -10px -10px 20px #ffffff;
-          box-shadow: inset 5px 5px 10px #dfdfe2, inset -5px -5px 10px #ffffff;
+        li {
+          list-style: none;
+          font-family: $fontOne;
+          font-weight: 500;
+          font-size: 1.7rem;
+          padding: 10px;
+          border-radius: 8px;
+          transition: 0.2s ease-in;
+          cursor: pointer;
+          &:hover {
+            // box-shadow: inset 10px 10px 20px #e2e2e4,
+            //   inset -10px -10px 20px #ffffff;
+            box-shadow: inset 5px 5px 10px #dfdfe2, inset -5px -5px 10px #ffffff;
+          }
         }
       }
     }
-  }
 
-  .Navbar__LoginBtn {
-    background-color: $colorOne;
-    font-size: 1.7rem;
-    font-weight: 600;
-    border: none;
-    padding: 10px 25px;
-    box-shadow: 5px 5px 10px #dfdfe2, -5px -5px 10px #ffffff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    outline: none;
-    border-radius: 7px;
-    font-family: $fontOne;
-    cursor: pointer;
-    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) ease-in-out;
+    .Navbar__LoginBtn {
+      background-color: $colorOne;
+      font-size: 1.7rem;
+      font-weight: 600;
+      border: none;
+      padding: 10px 25px;
+      box-shadow: 5px 5px 10px #dfdfe2, -5px -5px 10px #ffffff;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      outline: none;
+      border-radius: 7px;
+      font-family: $fontOne;
+      cursor: pointer;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) ease-in-out;
 
-    &:hover {
-      box-shadow: inset 5px 5px 10px #dfdfe2, inset -5px -5px 10px #ffffff;
+      &:hover {
+        box-shadow: inset 5px 5px 10px #dfdfe2, inset -5px -5px 10px #ffffff;
+      }
     }
   }
 }
