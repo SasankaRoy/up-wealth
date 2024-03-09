@@ -16,7 +16,21 @@ const NewRelease = () => {
                     </div>
                 </div>
                 <div className='NewRelease__textContentWrapper'>
-                    the content div
+                    <h3 className='NewRelease__subTitle'>New Release</h3>
+                    <h2 className='NewRelease__title'>This is</h2>
+
+                    <div className='NewRelease__infoWrapper'>
+                        <p>
+                            “If your heart is in your dream, no request is too extreme”
+                        </p>
+                        <h3>-Jiminy Cricket.</h3>
+                        <p>
+                            Subscribe today and learn how to bring your dreams to life and grow your profit margins.
+                        </p>
+                    </div>
+                        <button class="NewRelease__subscribeUpwealth">
+                            Subscribe to Upwealth!
+                        </button>
                 </div>
             </div>
         </div>

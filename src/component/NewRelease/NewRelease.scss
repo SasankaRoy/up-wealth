@@ -1,17 +1,16 @@
 @import "../../index.scss";
 
-
 @keyframes rotateCardBg {
-    0%{
-        transform: rotateZ(0deg);
-        z-index: 1;
-        opacity: 0;
-    }
-    100%{
-        transform: rotateZ(20deg);
-        z-index: 1;
-        opacity: 1;
-    }
+  0% {
+    transform: rotateZ(0deg);
+    z-index: 1;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(20deg);
+    z-index: 1;
+    opacity: 1;
+  }
 }
 
 .NewRelease__containerWrapper {
@@ -19,9 +18,9 @@
   height: 100dvh;
   background: rgb(240, 240, 243);
   background: linear-gradient(
-    145deg,
-    rgba(240, 240, 243, 1) 15%,
-    rgba(174, 206, 255, 1) 46%
+    144deg,
+    rgba(240, 240, 243, 1) 59%,
+    rgba(174, 206, 255, 1) 100%
   );
 
   // background text image....
@@ -46,6 +45,7 @@
       position: relative;
       display: flex;
       justify-content: center;
+      align-items: start;
 
       .NewRelease__ImageWrapper {
         position: relative;
@@ -77,13 +77,70 @@
           transform: rotateZ(20deg);
           z-index: 1;
           opacity: 1;
-        //   animation: rotateCardBg .4s  forwards;
+          //   animation: rotateCardBg .4s  forwards;
         }
       }
     }
     .NewRelease__textContentWrapper {
       flex: 1;
-      background-color: green;
+      .NewRelease__subTitle {
+        font-size: 3.1rem;
+        font-weight: 500;
+        font-family: $fontTwo;
+        background: rgb(233, 160, 50);
+        background: linear-gradient(
+          181deg,
+          rgba(233, 160, 50, 1) 50%,
+          rgba(245, 194, 110, 1) 75%
+        );
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .NewRelease__title {
+        font-size: 5rem;
+        font-family: $fontOne;
+        font-weight: bold;
+      }
+      .NewRelease__infoWrapper {
+        width: 60%;
+        margin-top: 75px;
+        padding: 30px;
+        border-radius:10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 15px,-5px -5px 15px #f3f3f1;
+        filter: blur(5px);
+        p {
+          font-size: 2.1rem;
+          font-family: $fontOne;
+          font-weight: 500;
+        }
+        h3 {
+          font-size: 2.1rem;
+          font-family: $fontOne;
+          font-weight: 700;
+          margin: 15px 0;
+        }
+        &:hover{
+            filter: blur(0);
+        }
+      }
+      .NewRelease__subscribeUpwealth {
+        background-color: #bbd5fc;
+        border: none;
+        outline: none;
+        padding: 15px 20px;
+        border-radius: 4px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-family: $fontOne;
+        margin-top: 40px;
+        cursor: pointer;
+        box-shadow:10px 10px 20px rgba(0,0,0,.25), -10px -10px 20px #f3f3f1;
+        transition:all 1.3s ease-in-out;
+        &:hover{
+            transition:all 1.3s ease-in-out;
+            box-shadow:inset 10px 10px 20px rgba(0,0,0,.25),inset -10px -10px 20px #f3f3f1;
+        }
+      }
     }
   }
 }
