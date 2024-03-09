@@ -3,6 +3,7 @@ import "./App.scss";
 import About from "./component/About/About";
 import Hero from "./component/Hero/Hero";
 import Navbar from "./component/Navbar/Navbar";
+import NewRelease from "./component/NewRelease/NewRelease";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <NewRelease />
     </div>
   );
 }

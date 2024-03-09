@@ -1,0 +1,89 @@
+@import "../../index.scss";
+
+
+@keyframes rotateCardBg {
+    0%{
+        transform: rotateZ(0deg);
+        z-index: 1;
+        opacity: 0;
+    }
+    100%{
+        transform: rotateZ(20deg);
+        z-index: 1;
+        opacity: 1;
+    }
+}
+
+.NewRelease__containerWrapper {
+  position: relative;
+  height: 100dvh;
+  background: rgb(240, 240, 243);
+  background: linear-gradient(
+    145deg,
+    rgba(240, 240, 243, 1) 15%,
+    rgba(174, 206, 255, 1) 46%
+  );
+
+  // background text image....
+  .newReleaseText__bg {
+    position: absolute;
+    left: 0;
+    top: 28%;
+    width: 100%;
+    opacity: 1;
+  }
+  // content-main div...
+  .NewRelease__contentMainWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .NewRelease__contentImageWrapper {
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .NewRelease__ImageWrapper {
+        position: relative;
+        width: 45%;
+        img {
+          position: relative;
+          z-index: 10;
+          width: 100%;
+          border: 3px solid red;
+        }
+        &::before {
+          background: linear-gradient(
+            103deg,
+            rgba(255, 181, 183, 1) 26%,
+            rgba(255, 84, 86, 1) 56%
+          );
+          border-radius: 15px;
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          opacity: 0;
+          transition: all 0.4s ease-in-out;
+        }
+        &:hover::before {
+          transform: rotateZ(20deg);
+          z-index: 1;
+          opacity: 1;
+        //   animation: rotateCardBg .4s  forwards;
+        }
+      }
+    }
+    .NewRelease__textContentWrapper {
+      flex: 1;
+      background-color: green;
+    }
+  }
+}
