@@ -66,8 +66,9 @@ const ImageSlider = () => {
             key={id}
             onMouseOver={handleMoveEnter}
           >
-            {console.log(id)}
+            
             <img className="slider__CardImage" src={cur} alt="sliderImgs" />
+            {/* <img className="slider__CardImage__shadow" src={cur} alt="sliderImgs-shadow" /> */}
           </SwiperSlide>
         ))}
       </Swiper>

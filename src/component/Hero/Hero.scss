@@ -161,6 +161,11 @@
 
     .slider__ImageWrapper {
       position: relative;
+      img {
+        // -webkit-box-reflect: below 0px linear-gradient(to bottom,transparent,black,);
+        -webkit-box-reflect: below 0px
+        linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.9809173669467787) 100%);
+      }
       &::before {
         position: absolute;
         background-position: bottom;
@@ -172,36 +177,15 @@
         content: "";
         opacity: 0.1;
       }
-    }
-    .slider__Image_0 {
-      &::before {
-        background-image: url(../../assets/images/sliderImg1.png);
-      }
-    }
-    .slider__Image_1 {
-      &::before {
-        background-image: url(../../assets/images/sliderImg2.png);
-      }
-    }
-    .slider__Image_2 {
-      &::before {
-        background-image: url(../../assets/images/sliderImg3.png);
-      }
-    }
-    .slider__Image_3 {
-      &::before {
-        background-image: url(../../assets/images/sliderImg4.png);
-      }
-    }
-    .slider__Image_4 {
-      &::before {
-        background-image: url(../../assets/images/sliderImg5.png);
-      }
-    }
-    .slider__Image_5 {
-      &::before {
-        background-image: url(../../assets/images/sliderImg6.png);
-      }
+
+      // .slider__CardImage__shadow {
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 10%;
+      //   bottom: 50px;
+      //   z-index: -1;
+      //   opacity: 0.28;
+      // }
     }
   }
 }
