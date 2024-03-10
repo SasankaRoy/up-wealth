@@ -105,11 +105,23 @@
         width: 60%;
         margin-top: 75px;
         padding: 30px;
-        border-radius:10px;
-        box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 15px,-5px -5px 15px #f3f3f1;
-        filter: blur(5px);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 3px 3px 10px, -3px -3px 10px #f3f3f1;
+        filter: blur(3px);
+        position: relative;
+        overflow: hidden;
+        background-clip: text;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+        border-right-color: rgba(255, 255, 255, 0.2);
+        transition: top 0.5s ease-in-out, transform 0.5s ease-in-out,
+          z-index 0s ease-in-out;
+        transition-delay: 0.5s 0s, 0.5s;
+        z-index: 1;
         p {
-          font-size: 2.1rem;
+          font-size: 1.8rem;
           font-family: $fontOne;
           font-weight: 500;
         }
@@ -119,8 +131,48 @@
           font-weight: 700;
           margin: 15px 0;
         }
-        &:hover{
-            filter: blur(0);
+        &::before {
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.4);
+          content: "";
+          top: 0;
+          left: 0;
+          height: 100%;
+          transform: skewX(-45deg) translateX(380px);
+          transition: transform 0.5s ease-in-out;
+          width: 2%;
+          z-index: -1;
+          opacity: 0;
+        }
+        &::after {
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.4);
+          content: "";
+          top: 0;
+          left: 0;
+          height: 100%;
+          transform: skewX(-45deg) translateX(375px);
+          transition: transform 0.5s ease-in-out;
+          width: 2%;
+          z-index: -1;
+          opacity: 0;
+        }
+        &:hover {
+          filter: blur(0);
+        }
+        &:hover::before,
+        &:focus::before,
+        &:active::before {
+          transform: skewX(-45deg) translateX(-150px);
+          z-index: 1;
+          opacity: 1;
+        }
+        &:hover::after,
+        &:focus::after,
+        &:active::after {
+          transform: skewX(-45deg) translateX(-150px);
+          z-index: 1;
+          opacity: 1;
         }
       }
       .NewRelease__subscribeUpwealth {
@@ -134,11 +186,12 @@
         font-family: $fontOne;
         margin-top: 40px;
         cursor: pointer;
-        box-shadow:10px 10px 20px rgba(0,0,0,.25), -10px -10px 20px #f3f3f1;
-        transition:all 1.3s ease-in-out;
-        &:hover{
-            transition:all 1.3s ease-in-out;
-            box-shadow:inset 10px 10px 20px rgba(0,0,0,.25),inset -10px -10px 20px #f3f3f1;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25), -10px -10px 20px #f3f3f1;
+        transition: all 1.3s ease-in-out;
+        &:hover {
+          transition: all 1.3s ease-in-out;
+          box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.25),
+            inset -10px -10px 20px #f3f3f1;
         }
       }
     }

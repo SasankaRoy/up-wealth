@@ -28,9 +28,9 @@ const NewRelease = () => {
                             Subscribe today and learn how to bring your dreams to life and grow your profit margins.
                         </p>
                     </div>
-                        <button class="NewRelease__subscribeUpwealth">
-                            Subscribe to Upwealth!
-                        </button>
+                    <button class="NewRelease__subscribeUpwealth">
+                        Subscribe to Upwealth!
+                    </button>
                 </div>
             </div>
         </div>
