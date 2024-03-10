@@ -4,6 +4,7 @@ import About from "./component/About/About";
 import Hero from "./component/Hero/Hero";
 import Navbar from "./component/Navbar/Navbar";
 import NewRelease from "./component/NewRelease/NewRelease";
+import PreviousEdition from "./component/PreviousEdition/PreviousEdition";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <About />
       <NewRelease />
+      <PreviousEdition />
     </div>
   );
 }
