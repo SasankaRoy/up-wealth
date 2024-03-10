@@ -175,23 +175,49 @@
           opacity: 1;
         }
       }
-      .NewRelease__subscribeUpwealth {
-        background-color: #bbd5fc;
-        border: none;
-        outline: none;
-        padding: 15px 20px;
-        border-radius: 4px;
-        font-size: 1.6rem;
-        font-weight: 700;
-        font-family: $fontOne;
+      .NewRelease__buttonWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background: #000;
         margin-top: 40px;
-        cursor: pointer;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25), -10px -10px 20px #f3f3f1;
-        transition: all 1.3s ease-in-out;
-        &:hover {
+        width: 90%;
+        .NewRelease__subscribeUpwealth {
+          background-color: #bbd5fc;
+          border: none;
+          outline: none;
+          padding: 15px 20px;
+          border-radius: 4px;
+          font-size: 1.6rem;
+          font-weight: 700;
+          font-family: $fontOne;
+          cursor: pointer;
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.19),
+            -5px -5px 10px #BBD5FC;
           transition: all 1.3s ease-in-out;
-          box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.25),
-            inset -10px -10px 20px #f3f3f1;
+          &:hover {
+            transition: all 1.3s ease-in-out;
+            box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.19),
+              inset -5px -5px 10px #BBD5FC;
+          }
+        }
+        .moveToNewSec__Btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #BBD5FC;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          box-shadow: 10px 10px 20px rgba(0,0,0,.19), -10px -10px 20px #BBD5FC;
+          transition: all 0.5s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            box-shadow: inset 10px 10px 20px rgba(0,0,0,.19),
+              inset -10px -10px 20px #BBD5FC;
+          }
         }
       }
     }
