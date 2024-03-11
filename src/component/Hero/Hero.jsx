@@ -13,12 +13,12 @@ import "swiper/css/navigation";
 
 import DownArrowIcon from "../../assets/images/downArrowIcon.png";
 import subscribeHoverIcon from "../../assets/images/subscribeHoverIcon.png";
-import SliderImg1 from "../../assets/images/sliderImg1.png";
-import SliderImg2 from "../../assets/images/sliderImg2.png";
-import SliderImg3 from "../../assets/images/sliderImg3.png";
-import SliderImg4 from "../../assets/images/sliderImg4.png";
-import SliderImg5 from "../../assets/images/sliderImg5.png";
-import SliderImg6 from "../../assets/images/sliderImg6.png";
+import SliderImg1 from "../../assets/images/sliderImg2.1.png";
+import SliderImg2 from "../../assets/images/sliderImg2.2.png";
+import SliderImg3 from "../../assets/images/sliderImg2.3.png";
+import SliderImg4 from "../../assets/images/sliderImg2.4.png";
+import SliderImg5 from "../../assets/images/sliderImg2.5.png";
+// import SliderImg6 from "../../assets/images/sliderImg6.png";
 
 SwiperCore.use([EffectCoverflow]);
 
@@ -31,7 +31,7 @@ const ImageSlider = () => {
     SliderImg3,
     SliderImg4,
     SliderImg5,
-    SliderImg6,
+    // SliderImg6,
   ];
 
   const handleMoveEnter = () => {

@@ -84,7 +84,20 @@
     .PreviousEdition__outerBottomWrapper {
       width: 90%;
       margin: 0 auto;
-      background-color: green;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .PreviousEdition__sliderDiv{
+        background-color:red;
+        width:80%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        div{
+          background-color:green
+        }
+      }
     }
   }
 }
