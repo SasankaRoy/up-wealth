@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './NewRelease.scss';
 import NewReleaseBg from '../../assets/images/newRelease.png'
 import NewReleaseCardImg from '../../assets/images/newReleaseCardImg.png'
-import DownArrowIcon from '../../assets/images/downArrowIcon.png'
+import DownArrowIcon2 from '../../assets/images/downArrowIcon2.png'
 
 const NewRelease = () => {
     return (
@@ -43,7 +43,7 @@ const NewRelease = () => {
                             className="moveToNewSec__Btn"
                         // aria-description="move-to-the-next-section-button"
                         >
-                            <img src={DownArrowIcon} alt="downArrowIcon" />
+                            <img src={DownArrowIcon2} alt="downArrowIcon" />
                         </button>
 
                     </div>
