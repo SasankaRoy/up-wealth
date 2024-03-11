@@ -9,7 +9,7 @@ import SliderImg3 from "../../assets/images/sliderImg3.png";
 import SliderImg4 from "../../assets/images/sliderImg4.png";
 import SliderImg5 from "../../assets/images/sliderImg5.png";
 
-
+import DownArrowIcon from "../../assets/images/downArrowIcon.png";
 import NextArrowIcon from "../../assets/images/nextArrow.png";
 import PreviousArrowIcon from "../../assets/images/preArrow.png";
 
@@ -54,7 +54,7 @@ const PreviousEdition = () => {
                         <motion.button initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: .6, ease: 'backOut', delay: .1 }} className='PreviousEdition__viewAllBtn'>View All Editions</motion.button>
                     </div>
                 </div>
-                <motion.div initial={{opacity:0,y:100}} whileInView={{opacity:1,y:0}} transition={{duration:1.2,ease:'backOut',delay:.3}} className='PreviousEdition__outerBottomWrapper'>
+                <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: 'backOut', delay: .3 }} className='PreviousEdition__outerBottomWrapper'>
                     <button className='navigationArrowBtns' disabled={startIndex === 0} onClick={handlePrevClick}>
                         <img src={PreviousArrowIcon} alt='previous-arrow-icon' />
                     </button>
@@ -63,7 +63,7 @@ const PreviousEdition = () => {
                             <div className="image-slider-container">
                                 {images.slice(startIndex, startIndex + 4).map((image, index) => (
                                     <div key={index} className="image-card">
-                                        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:.8,ease:'backIn',delay:.7}} src={image} alt={`Image ${startIndex + index}`} />
+                                        <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: .8, ease: 'backIn', delay: .7 }} src={image} alt={`Image ${startIndex + index}`} />
                                     </div>
                                 ))}
                             </div>
@@ -74,6 +74,14 @@ const PreviousEdition = () => {
                         <img src={NextArrowIcon} alt='next-arrow-icon' />
                     </button>
                 </motion.div>
+                <div className='PreviousEdition__nextSectionBtnWrapper'>
+                    <button
+                        className="moveToNewSec__Btn"
+                    // aria-description="move-to-the-next-section-button"
+                    >
+                        <img src={DownArrowIcon} alt="downArrowIcon" />
+                    </button>
+                </div>
             </motion.div>
         </div>
     )
