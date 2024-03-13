@@ -1,6 +1,5 @@
 @import "../../index.scss";
 
-
 .Hero__mainWrapper {
   height: 100dvh;
   background-image: url(../../assets/images/heroBg.png);
@@ -132,7 +131,7 @@
 
     .sliderImgs__mainWrapper {
       width: 97%;
-      height: 80%;
+      height: 85%;
       display: flex;
 
       .sliderImgs__Wrapper {
@@ -158,8 +157,8 @@
           display: none !important;
         }
       }
+    
     }
-
   }
 }
 .swiper-3d .swiper-slide-shadow-left,
@@ -171,12 +170,13 @@
   .Hero__mainWrapper {
     .Hero__textMainWrapper {
       .Hero__textWrapper {
+        width: 85%;
         h1 {
-          font-size: 13rem;
-          line-height: 13rem;
+          font-size: 16rem;
+          line-height: 16rem;
         }
         .small__informationPara {
-          font-size: 2.4rem;
+          font-size: 2.9rem;
         }
         .subscribeAndArrowBtn__Wrapper {
           gap: 30px;
@@ -184,7 +184,7 @@
           .subscribeNow__Btn {
             gap: 15px;
             padding: 15px 20px;
-            font-size: 2.7rem;
+            font-size: 3.3rem;
 
             img {
               width: 0px;
@@ -210,10 +210,41 @@
 
     .Hero__sliderMainWrapper {
       .sliderImgs__mainWrapper {
-        width: 85%;
-        height: 65%;
+        width: 97%;
+        height: 85%;
         display: flex;
       }
     }
   }
 }
+// @media (max-width: 1720px) {
+//   .Hero__mainWrapper {
+//     background-color: yellow;
+//   }
+// }
+
+// @media (max-width: 1520px) {
+//   .Hero__mainWrapper {
+//     background-color: pink;
+//   }
+// }
+
+@media (max-width: 1280px) {
+  .Hero__mainWrapper {
+    // background-color: green;
+    .Hero__textMainWrapper {
+      .Hero__textWrapper {
+        h1 {
+          font-size: 6rem;
+          line-height: 6rem;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 992px) {
+//   .Hero__mainWrapper {
+//     background-color: red;
+//   }
+// }

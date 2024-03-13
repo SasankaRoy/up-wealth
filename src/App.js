@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <About />
-      <NewRelease />
-      <PreviousEdition />
+      {/* <About /> */}
+      {/* <NewRelease />
+      <PreviousEdition /> */}
     </div>
   );
 }

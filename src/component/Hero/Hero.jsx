@@ -42,6 +42,22 @@ const ImageSlider = () => {
       swiperRef.current.swiper.slideNext();
     }
   };
+
+  let sliderImageStlye;
+  // window.innerWidth>=1920?-850:-600
+
+  
+
+  if (window.innerWidth >= 1920) {
+    sliderImageStlye = -1000
+  }
+  else if (window.innerWidth >= 1025 & window.innerWidth <= 1919) {
+    sliderImageStlye = -550
+  }else{
+    sliderImageStlye = -400
+  }
+
+
   return (
     <>
       <Swiper
@@ -50,7 +66,7 @@ const ImageSlider = () => {
         centeredSlides={true}
         loop={true}
         slidesPerView={"auto"}
-        spaceBetween={-650}
+        spaceBetween={sliderImageStlye}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -68,10 +84,12 @@ const ImageSlider = () => {
           >
             
             <img className="slider__CardImage" src={cur} alt="sliderImgs" />
-            {/* <img className="slider__CardImage__shadow" src={cur} alt="sliderImgs-shadow" /> */}
+            
           </SwiperSlide>
         ))}
       </Swiper>
+
+      
     </>
   );
 };
@@ -149,14 +167,14 @@ const Hero = () => {
           >
             <button
               className="subscribeNow__Btn"
-              // aria-description="subscribe-now-button"
+            // aria-description="subscribe-now-button"
             >
               Subscribe Now!
               <img src={subscribeHoverIcon} alt="subscribeHoverIcon" />
             </button>
             <button
               className="moveToNewSec__Btn"
-              // aria-description="move-to-the-next-section-button"
+            // aria-description="move-to-the-next-section-button"
             >
               <img src={DownArrowIcon} alt="downArrowIcon" />
             </button>
