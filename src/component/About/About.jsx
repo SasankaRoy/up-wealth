@@ -15,8 +15,24 @@ const About = () => {
   const [scope, animate] = useAnimate();
 
   // for card-one...
-  const xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
-  const yPositionC1 = window.innerWidth > 1920 ? '84%' : '50%';
+  let xPositionC1,yPositionC1;
+  
+  
+  // xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
+  // yPositionC1 = window.innerWidth > 1920 ? '84%' : '50%';
+  if (window.innerWidth >= 1920) {    
+    xPositionC1 = '-512%';
+    yPositionC1 =  '84%';
+  }
+  else if (window.innerWidth >= 1025 & window.innerWidth <= 1919) {
+    // sliderImageStlye = -550
+    xPositionC1 = '-500%';
+    yPositionC1 =  '50%';
+  }else{
+    // sliderImageStlye = -400
+    xPositionC1 = '-500%';
+    yPositionC1 =  '50%';
+  }
 
   // for card-two...
   const xPositionC2 = window.innerWidth > 1920 ? -560 : -300;
