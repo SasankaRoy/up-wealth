@@ -15,8 +15,8 @@ const About = () => {
   const [scope, animate] = useAnimate();
 
   // for card-one...
-  const xPositionC1 = window.innerWidth > 1920 ? -912 : -550;
-  const yPositionC1 = window.innerWidth > 1920 ? 224 : 50;
+  const xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
+  const yPositionC1 = window.innerWidth > 1920 ? '84%' : '50%';
 
   // for card-two...
   const xPositionC2 = window.innerWidth > 1920 ? -560 : -300;

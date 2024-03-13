@@ -13,7 +13,7 @@
     width: 100%;
     height: 95%;
     bottom: 0;
-    left: 0;
+    left:0;
     object-fit: cover;
     object-position: top;
   }
@@ -35,14 +35,14 @@
       #mainCard {
         width: 210px;
       }
-      .hidden__Card1 {
-        --translateX: -550;
-        --translateY: 50;
-        --opacity: 1;
-      }
+      // .hidden__Card1 {
+      //   --translateX: -550;
+      //   --translateY: 50;
+      //   --opacity: 1;
+      // }
       .hidden__Cards {
         position: absolute;
-        width: 120px;
+        width: 100px;
         top: 25%;
         left: 20%;
         z-index: -1;
@@ -54,9 +54,11 @@
       justify-content: center;
       align-items: center;
       gap: 0px;
-      width: 85%;
-      background-color: $colorOne;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      width: 95%;
+      background-color: $colorOne;      
+      box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 8.5px 0px;
+      border-radius: 15px;
+
 
       .About__contentWrapper {
         display: flex;
@@ -76,7 +78,7 @@
             color: $colorFour;
           }
           h2 {
-            font-size: 3.4rem;
+            font-size: 3.8rem;
             font-family: $fontOne;
             font-weight: 800;
             color: black;
@@ -92,7 +94,7 @@
           flex: 2;
           padding: 30px;
           p {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-family: $fontOne;
             font-weight: 500;
             line-height: 23px;
