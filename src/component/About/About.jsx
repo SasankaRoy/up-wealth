@@ -16,6 +16,7 @@ const About = () => {
 
   // for card-one...
   let xPositionC1,yPositionC1;
+  let xPositionC2,yPositionC2;
   
   
   // xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
@@ -23,20 +24,32 @@ const About = () => {
   if (window.innerWidth >= 1920) {    
     xPositionC1 = '-512%';
     yPositionC1 =  '84%';
+
+    xPositionC2 = '-360%';
+    yPositionC2 =  '-55%';
+
+
   }
-  else if (window.innerWidth >= 1025 & window.innerWidth <= 1919) {
-    // sliderImageStlye = -550
+  else if (window.innerWidth >= 1025 & window.innerWidth <= 1919) {    
     xPositionC1 = '-500%';
     yPositionC1 =  '50%';
+
+    xPositionC2 = '-300%';
+    yPositionC2 =  '-50%';
+
+
   }else{
     // sliderImageStlye = -400
     xPositionC1 = '-500%';
     yPositionC1 =  '50%';
+
+    xPositionC2 = '-300%';
+    yPositionC2 =  '-50%';
   }
 
   // for card-two...
-  const xPositionC2 = window.innerWidth > 1920 ? -560 : -300;
-  const yPositionC2 = window.innerWidth > 1920 ? -55 : -100;
+  //  xPositionC2 = window.innerWidth > 1920 ? -560 : -300;
+  //  yPositionC2 = window.innerWidth > 1920 ? -55 : -100;
 
   // for card-three...
   const xPositionC3 = window.innerWidth > 1920 ? 645 : 300;
