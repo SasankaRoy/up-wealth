@@ -17,6 +17,8 @@ const About = () => {
   // for card-one...
   let xPositionC1,yPositionC1;
   let xPositionC2,yPositionC2;
+  let xPositionC3,yPositionC3;
+  let xPositionC4,yPositionC4;
   
   
   // xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
@@ -28,36 +30,56 @@ const About = () => {
     xPositionC2 = '-360%';
     yPositionC2 =  '-55%';
 
+    xPositionC3 = '300%';
+    yPositionC3 = '-70%';
+
+    xPositionC4 = '552%';
+    yPositionC4 =  '84%';
+
 
   }
-  else if (window.innerWidth >= 1025 & window.innerWidth <= 1919) {    
+  else if (window.innerWidth >= 1720 & window.innerWidth <= 1919) {    
     xPositionC1 = '-500%';
     yPositionC1 =  '50%';
 
     xPositionC2 = '-300%';
     yPositionC2 =  '-50%';
+
+
+    xPositionC3 = '300%';
+    yPositionC3 = '-50%';
+
+    xPositionC4 = '500%';
+    yPositionC4 =  '50%';
 
 
   }else{
-    // sliderImageStlye = -400
+    
     xPositionC1 = '-500%';
     yPositionC1 =  '50%';
 
     xPositionC2 = '-300%';
     yPositionC2 =  '-50%';
+
+    xPositionC3 = '300%';
+    yPositionC3 = '-50%';
+
+    xPositionC4 = '500%';
+    yPositionC4 =  '50%';
   }
 
   // for card-two...
   //  xPositionC2 = window.innerWidth > 1920 ? -560 : -300;
   //  yPositionC2 = window.innerWidth > 1920 ? -55 : -100;
-
+  
   // for card-three...
-  const xPositionC3 = window.innerWidth > 1920 ? 645 : 300;
-  const yPositionC3 = window.innerWidth > 1920 ? -55 : -100;
+  // const xPositionC3 = window.innerWidth > 1920 ? 645 : 300;
+  // const yPositionC3 = window.innerWidth > 1920 ? -55 : -100;
+
 
   // for card-four...
-  const xPositionC4 = window.innerWidth > 1920 ? 960 : 550;
-  const yPositionC4 = window.innerWidth > 1920 ? 224 : 50;
+  // const xPositionC4 = window.innerWidth > 1920 ? 960 : 550;
+  // const yPositionC4 = window.innerWidth > 1920 ? 224 : 50;
 
   const handleMouseEnter = async () => {
     // rotate the main-card
@@ -68,6 +90,7 @@ const About = () => {
     animate(".hidden__Card1", {
       x: xPositionC1,
       y: yPositionC1,
+      
     });
     animate(".hidden__Card2", {
       x: xPositionC2,
@@ -110,7 +133,9 @@ const About = () => {
         alt="about__bgImg"
       />
       <div className="About__contentMainWrapper">
-        <div ref={scope} className="AboutUs__imgWrapper">
+        <div
+         ref={scope}
+         className="AboutUs__imgWrapper">
           <motion.img
             id="mainCard"
             initial={{
