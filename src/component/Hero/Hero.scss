@@ -3,9 +3,11 @@
 .Hero__mainWrapper {
   height: 100dvh;
   background-color: #F0F0F3;
-  // background-image: url(../../assets/images/heroBg.png);
+
+  background-image: url(../../assets/images/heroBg.png);
   background-repeat: no-repeat;
   background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
