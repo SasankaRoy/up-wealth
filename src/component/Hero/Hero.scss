@@ -2,7 +2,7 @@
 
 .Hero__mainWrapper {
   height: 100dvh;
-  background-image: url(../../assets/images/heroBg.png);
+  // background-image: url(../../assets/images/heroBg.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -78,7 +78,7 @@
           font-family: $fontOne;
           font-size: 1.7rem;
           cursor: pointer;
-          background-color: #f0f0f3;
+          background-color:#F0F0F3;
           transition: 0.3s ease-out;
           // box-shadow: 1px 1px 2px #f0f0f3, -1px -1px 2px #f0f0f3;
 
