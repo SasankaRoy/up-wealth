@@ -26,7 +26,7 @@ const About = () => {
 
   // xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
   // yPositionC1 = window.innerWidth > 1920 ? '84%' : '50%';
-  if (window.innerWidth >= 1920) {
+  if (window.innerWidth >= 1921) {
     xPositionC1 = "-512%";
     yPositionC1 = "84%";
 
@@ -38,17 +38,17 @@ const About = () => {
 
     xPositionC4 = "552%";
     yPositionC4 = "84%";
-  } else if ((window.innerWidth >= 1720) & (window.innerWidth <= 1919)) {
-    xPositionC1 = "-500%";
+  } else if ((window.innerWidth >= 1720) & (window.innerWidth <= 1920)) {
+    xPositionC1 = "-560%";
     yPositionC1 = "50%";
 
-    xPositionC2 = "-300%";
+    xPositionC2 = "-360%";
     yPositionC2 = "-50%";
 
-    xPositionC3 = "300%";
+    xPositionC3 = "450%";
     yPositionC3 = "-50%";
 
-    xPositionC4 = "500%";
+    xPositionC4 = "580%";
     yPositionC4 = "50%";
   } else {
     xPositionC1 = "-500%";

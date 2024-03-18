@@ -157,6 +157,27 @@
 @media (max-width: 1921px) {
   .About__mainWrapper {
     // background-color: cyan;
+    .About__BgUpwealth1{
+      position: absolute;
+      left: 35%;
+      top: 15%;
+      z-index: 1;
+      width: 550px;    
+    }
+    .About__BgUpwealth2{
+      position: absolute;
+      left: 35%;
+      top: 30%;
+      z-index: 1;
+      width: 550px;    
+    }
+    .About__BgUpwealth3{
+      position: absolute;
+      left: 35%;
+      top: 45%;
+      z-index: 50;
+      width: 550px;    
+    }
     .About__contentMainWrapper {
       // image wrapper
       .AboutUs__imgWrapper {
@@ -317,6 +338,27 @@
 @media(max-width:1520px){
   .About__mainWrapper {
     // background-color:blue;
+    .About__BgUpwealth1{
+      position: absolute;
+      left: 35%;
+      top: 15%;
+      z-index: 1;
+      width: 500px;    
+    }
+    .About__BgUpwealth2{
+      position: absolute;
+      left: 35%;
+      top: 30%;
+      z-index: 1;
+      width: 500px;    
+    }
+    .About__BgUpwealth3{
+      position: absolute;
+      left: 35%;
+      top: 45%;
+      z-index: 50;
+      width: 500px;    
+    }
 
     .About__contentMainWrapper {
       // image wrapper
@@ -371,7 +413,7 @@
 
 @media(max-width:1320px){
   .About__mainWrapper {
-    // background-color: green;
+    background-color: green;
 
     .About__contentMainWrapper {
       // image wrapper
