@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import Logo from "../../assets/images/logo.png";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const [screenPositionY, setScreenPosiionY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScreenPosiionY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [screenPositionY]);
+
+
   return (
     <motion.nav
       initial={{
@@ -19,6 +32,10 @@ const Navbar = () => {
         ease: "backOut",
       }}
       className="Navbar__outerWrapper"
+      style={{
+        backgroundColor: screenPositionY >= 5 ? "#f0f0f3" : "transparent",
+        boxShadow: screenPositionY >= 5 ? "1px 1px 10px rgba(0, 0, 0, 0.2)" : "none",
+      }}
     >
       <div className="Navbar__mainWrapper">
         <div className="Navbar__LogoWrapper">

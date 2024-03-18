@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Hero.scss";
 // import gsap from "gsap";
 
@@ -96,6 +96,8 @@ const ImageSlider = () => {
 };
 
 const Hero = () => {
+
+  const [mouseEnter,setMouseEnter] = useState(false);
   // useEffect(() => {
   //   const textTimeLine = gsap.timeline();
 
@@ -109,6 +111,12 @@ const Hero = () => {
   //     },
   //   });
   // }, []);
+
+  const handleMoveEnter = ()=>{
+    // console.log('mouse enter the image cards slider')
+    setMouseEnter(true);
+
+  }
   return (
     <div className="Hero__mainWrapper">
       <div className="Hero__textMainWrapper">
@@ -205,19 +213,19 @@ const Hero = () => {
             <input type="radio" name="slider" id="s4" />
             <input type="radio" name="slider" id="s5" />
 
-            <label for="s1" id="slide1"><img
+            <label onMouseEnter={handleMoveEnter}  for="s1" id="slide1"><img
               src={SliderImg1}
               alt="" /></label>
-            <label for="s2" id="slide2"><img
+            <label onMouseEnter={handleMoveEnter}  for="s2" id="slide2"><img
               src={SliderImg2}
               alt="" /></label>
-            <label for="s3" id="slide3"><img
+            <label onMouseEnter={handleMoveEnter}  for="s3" id="slide3"><img
               src={SliderImg3}
               alt="" /></label>
-            <label for="s4" id="slide4"><img
+            <label onMouseEnter={handleMoveEnter}  for="s4" id="slide4"><img
               src={SliderImg4}
               alt="" /></label>
-            <label for="s5" id="slide5"><img src={SliderImg5}
+            <label onMouseEnter={handleMoveEnter}  for="s5" id="slide5"><img src={SliderImg5}
               alt="" /></label>
           </section>
         </motion.div>
