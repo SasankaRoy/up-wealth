@@ -47,17 +47,13 @@ const ImageSlider = () => {
   let sliderImageStlye;
   // window.innerWidth>=1920?-850:-600
 
-
-
   if (window.innerWidth >= 1920) {
-    sliderImageStlye = -1000
-  }
-  else if (window.innerWidth >= 1025 & window.innerWidth <= 1919) {
-    sliderImageStlye = -550
+    sliderImageStlye = -1000;
+  } else if ((window.innerWidth >= 1025) & (window.innerWidth <= 1919)) {
+    sliderImageStlye = -550;
   } else {
-    sliderImageStlye = -400
+    sliderImageStlye = -400;
   }
-
 
   return (
     <>
@@ -83,21 +79,16 @@ const ImageSlider = () => {
             key={id}
             onMouseOver={handleMoveEnter}
           >
-
             <img className="slider__CardImage" src={cur} alt="sliderImgs" />
-
           </SwiperSlide>
         ))}
       </Swiper>
-
-
     </>
   );
 };
 
 const Hero = () => {
-
-  const [mouseEnter,setMouseEnter] = useState(false);
+  const [mouseEnter, setMouseEnter] = useState(false);
   // useEffect(() => {
   //   const textTimeLine = gsap.timeline();
 
@@ -112,11 +103,10 @@ const Hero = () => {
   //   });
   // }, []);
 
-  const handleMoveEnter = ()=>{
+  const handleMoveEnter = () => {
     // console.log('mouse enter the image cards slider')
     setMouseEnter(true);
-
-  }
+  };
   return (
     <div className="Hero__mainWrapper">
       <div className="Hero__textMainWrapper">
@@ -176,14 +166,14 @@ const Hero = () => {
           >
             <button
               className="subscribeNow__Btn"
-            // aria-description="subscribe-now-button"
+              // aria-description="subscribe-now-button"
             >
               Subscribe Now!
               <img src={subscribeHoverIcon} alt="subscribeHoverIcon" />
             </button>
             <button
               className="moveToNewSec__Btn"
-            // aria-description="move-to-the-next-section-button"
+              // aria-description="move-to-the-next-section-button"
             >
               <img src={DownArrowIcon} alt="downArrowIcon" />
             </button>
@@ -213,20 +203,21 @@ const Hero = () => {
             <input type="radio" name="slider" id="s4" />
             <input type="radio" name="slider" id="s5" />
 
-            <label onMouseEnter={handleMoveEnter}  for="s1" id="slide1"><img
-              src={SliderImg1}
-              alt="" /></label>
-            <label onMouseEnter={handleMoveEnter}  for="s2" id="slide2"><img
-              src={SliderImg2}
-              alt="" /></label>
-            <label onMouseEnter={handleMoveEnter}  for="s3" id="slide3"><img
-              src={SliderImg3}
-              alt="" /></label>
-            <label onMouseEnter={handleMoveEnter}  for="s4" id="slide4"><img
-              src={SliderImg4}
-              alt="" /></label>
-            <label onMouseEnter={handleMoveEnter}  for="s5" id="slide5"><img src={SliderImg5}
-              alt="" /></label>
+            <label onMouseEnter={handleMoveEnter} for="s1" id="slide1">
+              <img src={SliderImg1} alt="" />
+            </label>
+            <label onMouseEnter={handleMoveEnter} for="s2" id="slide2">
+              <img src={SliderImg2} alt="" />
+            </label>
+            <label onMouseEnter={handleMoveEnter} for="s3" id="slide3">
+              <img src={SliderImg3} alt="" />
+            </label>
+            <label onMouseEnter={handleMoveEnter} for="s4" id="slide4">
+              <img src={SliderImg4} alt="" />
+            </label>
+            <label onMouseEnter={handleMoveEnter} for="s5" id="slide5">
+              <img src={SliderImg5} alt="" />
+            </label>
           </section>
         </motion.div>
       </div>

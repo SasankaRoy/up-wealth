@@ -16,6 +16,27 @@
     left:5%;
     object-fit: cover;
     object-position: top;
+  } 
+  .About__BgUpwealth1{
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    z-index: 1;
+    width: 450px;    
+  }
+  .About__BgUpwealth2{
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    z-index: 1;
+    width: 450px;    
+  }
+  .About__BgUpwealth3{
+    position: absolute;
+    left: 35%;
+    top: 40%;
+    z-index: 50;
+    width: 450px;    
   }
   .About__contentMainWrapper {
     position: absolute;
@@ -31,7 +52,7 @@
     gap: 20px;
 
     .AboutUs__imgWrapper {
-      position: relative;
+      position: relative;      
       #mainCard {
         width: 210px;
       }
@@ -50,6 +71,7 @@
       }
     }
     .About__contextMainWrapper {
+      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -57,7 +79,7 @@
       gap: 0px;
       width: 95%;
       background-color: $colorOne;      
-      box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 8.5px 0px;
+      box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 8.5px,rgba(0, 0, 0, 0.25) 2px 2px 8px,#ffffff -2px -2px 8.5px, #ffffff -5px -5px 8.5px;
       // box-shadow: 5px 5px 20px 0px rgba(0,0,0.15), -5px -5px 20px #ffffff;
       border-radius: 15px;
 
@@ -132,62 +154,9 @@
 }
 
 
-@media (min-width: 192px) {
+@media (max-width: 1921px) {
   .About__mainWrapper {
-    // background-color: pink;
-    .About__contentMainWrapper {
-      // image wrapper
-      .AboutUs__imgWrapper {
-        #mainCard {
-          width: 350px;
-        }
-        .hidden__Cards {
-          width: 150px;
-        }
-      }
-      // content wrapper
-      .About__contextMainWrapper {
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-        .About__contentWrapper {
-          padding: 25px;
-
-          .About__contentLeftWrapper {
-            flex: 1;
-            h3 {
-              font-size: 3.2rem;
-            }
-            h2 {
-              font-size: 6.5rem;
-            }
-            img {
-              height: 320px;
-            }
-          }
-          .About__contentRightWrapper {
-            flex: 2;
-            padding: 25px;
-            p {
-              font-size: 2.9rem;
-              line-height: 3.7rem;
-            }
-          }
-        }
-        .moveToNewSec__Btn {
-          width: 75px;
-          height: 75px;
-          img {
-            width: 24px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1920px) {
-  .About__mainWrapper {
-    // background-color: pink;
+    // background-color: cyan;
     .About__contentMainWrapper {
       // image wrapper
       .AboutUs__imgWrapper {
@@ -195,7 +164,7 @@
           width: 250px;
         }
         .hidden__Cards {
-          width: 120px;
+          width: 90px;
         }
       }
       // content wrapper
@@ -208,7 +177,7 @@
           .About__contentLeftWrapper {
             flex: 1;
             h3 {
-              font-size: 3.2rem;
+              font-size: 3.1rem;
             }
             h2 {
               font-size: 4.5rem;
@@ -230,7 +199,59 @@
           width: 55px;
           height: 55px;
           img {
-            width: 24px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1920px) {
+  .About__mainWrapper {
+    // background-color: pink;
+    .About__contentMainWrapper {
+      // image wrapper
+      .AboutUs__imgWrapper {
+        #mainCard {
+          width: 250px;
+        }
+        .hidden__Cards {
+          width: 100px;
+        }
+      }
+      // content wrapper
+      .About__contextMainWrapper {
+        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        .About__contentWrapper {
+          padding: 25px;
+
+          .About__contentLeftWrapper {
+            flex: 1;
+            h3 {
+              font-size: 3rem;
+            }
+            h2 {
+              font-size: 5rem;
+            }
+            img {
+              height: 250px;
+            }
+          }
+          .About__contentRightWrapper {
+            flex: 2;
+            padding: 25px;
+            p {
+              font-size: 2rem;
+              line-height: 3.3rem;
+            }
+          }
+        }
+        .moveToNewSec__Btn {
+          width: 55px;
+          height: 55px;
+          img {
+            width: 20px;
           }
         }
       }
@@ -262,10 +283,10 @@
           .About__contentLeftWrapper {
             flex: 1;
             h3 {
-              font-size: 2.7rem;
+              font-size: 2.6rem;
             }
             h2 {
-              font-size: 3.9rem;
+              font-size: 4rem;
             }
             img {
               height: 200px;
@@ -301,10 +322,10 @@
       // image wrapper
       .AboutUs__imgWrapper {
         #mainCard {
-          width: 200px;
+          width: 170px;
         }
         .hidden__Cards {
-          width: 100px;
+          width: 80px;
         }
       }
       // content wrapper
@@ -323,7 +344,7 @@
               font-size: 3.6rem;
             }
             img {
-              height: 200px;
+              height: 185px;
             }
           }
           .About__contentRightWrapper {
@@ -336,10 +357,10 @@
           }
         }
         .moveToNewSec__Btn {
-          width: 55px;
-          height: 55px;
+          width: 45px;
+          height: 45px;
           img {
-            width: 24px;
+            width: 15px;
           }
         }
       }

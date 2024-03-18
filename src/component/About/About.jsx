@@ -11,71 +11,66 @@ import SliderImg2 from "../../assets/images/sliderImg3.png";
 import SliderImg3 from "../../assets/images/sliderImg5.png";
 import SliderImg4 from "../../assets/images/sliderImg6.png";
 
+import Upwealth1 from "../../assets/images/UPWEALTH1.png";
+import Upwealth2 from "../../assets/images/UPWEALTH2.png";
+import Upwealth3 from "../../assets/images/UPWEALTH3.png";
+
 const About = () => {
   const [scope, animate] = useAnimate();
 
   // for card-one...
-  let xPositionC1,yPositionC1;
-  let xPositionC2,yPositionC2;
-  let xPositionC3,yPositionC3;
-  let xPositionC4,yPositionC4;
-  
-  
+  let xPositionC1, yPositionC1;
+  let xPositionC2, yPositionC2;
+  let xPositionC3, yPositionC3;
+  let xPositionC4, yPositionC4;
+
   // xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
   // yPositionC1 = window.innerWidth > 1920 ? '84%' : '50%';
-  if (window.innerWidth >= 1920) {    
-    xPositionC1 = '-512%';
-    yPositionC1 =  '84%';
+  if (window.innerWidth >= 1920) {
+    xPositionC1 = "-512%";
+    yPositionC1 = "84%";
 
-    xPositionC2 = '-360%';
-    yPositionC2 =  '-55%';
+    xPositionC2 = "-360%";
+    yPositionC2 = "-55%";
 
-    xPositionC3 = '300%';
-    yPositionC3 = '-70%';
+    xPositionC3 = "300%";
+    yPositionC3 = "-70%";
 
-    xPositionC4 = '552%';
-    yPositionC4 =  '84%';
+    xPositionC4 = "552%";
+    yPositionC4 = "84%";
+  } else if ((window.innerWidth >= 1720) & (window.innerWidth <= 1919)) {
+    xPositionC1 = "-500%";
+    yPositionC1 = "50%";
 
+    xPositionC2 = "-300%";
+    yPositionC2 = "-50%";
 
-  }
-  else if (window.innerWidth >= 1720 & window.innerWidth <= 1919) {    
-    xPositionC1 = '-500%';
-    yPositionC1 =  '50%';
+    xPositionC3 = "300%";
+    yPositionC3 = "-50%";
 
-    xPositionC2 = '-300%';
-    yPositionC2 =  '-50%';
+    xPositionC4 = "500%";
+    yPositionC4 = "50%";
+  } else {
+    xPositionC1 = "-500%";
+    yPositionC1 = "50%";
 
+    xPositionC2 = "-300%";
+    yPositionC2 = "-50%";
 
-    xPositionC3 = '300%';
-    yPositionC3 = '-50%';
+    xPositionC3 = "300%";
+    yPositionC3 = "-50%";
 
-    xPositionC4 = '500%';
-    yPositionC4 =  '50%';
-
-
-  }else{
-    
-    xPositionC1 = '-500%';
-    yPositionC1 =  '50%';
-
-    xPositionC2 = '-300%';
-    yPositionC2 =  '-50%';
-
-    xPositionC3 = '300%';
-    yPositionC3 = '-50%';
-
-    xPositionC4 = '500%';
-    yPositionC4 =  '50%';
+    xPositionC4 = "500%";
+    yPositionC4 = "50%";
   }
 
   // for card-two...
   //  xPositionC2 = window.innerWidth > 1920 ? -560 : -300;
   //  yPositionC2 = window.innerWidth > 1920 ? -55 : -100;
-  
+
   // for card-three...
   // const xPositionC3 = window.innerWidth > 1920 ? 645 : 300;
   // const yPositionC3 = window.innerWidth > 1920 ? -55 : -100;
-
 
   // for card-four...
   // const xPositionC4 = window.innerWidth > 1920 ? 960 : 550;
@@ -90,7 +85,6 @@ const About = () => {
     animate(".hidden__Card1", {
       x: xPositionC1,
       y: yPositionC1,
-      
     });
     animate(".hidden__Card2", {
       x: xPositionC2,
@@ -132,10 +126,32 @@ const About = () => {
         src={AboutBgImg}
         alt="about__bgImg"
       />
+      <motion.img
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.4, delay: 1, ease: "backOut" }}
+        src={Upwealth1}
+        alt="upwealth1-text"
+        className="About__BgUpwealth1"
+      />
+      <motion.img
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.6, delay: 1, ease: "backOut" }}
+        src={Upwealth2}
+        alt="upwealth1-text"
+        className="About__BgUpwealth2"
+      />
+      <motion.img
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.8, delay: 1, ease: "backOut" }}
+        src={Upwealth3}
+        alt="upwealth1-text"
+        className="About__BgUpwealth3"
+      />
       <div className="About__contentMainWrapper">
-        <div
-         ref={scope}
-         className="AboutUs__imgWrapper">
+        <div ref={scope} className="AboutUs__imgWrapper">
           <motion.img
             id="mainCard"
             initial={{
