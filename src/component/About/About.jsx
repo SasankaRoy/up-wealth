@@ -79,7 +79,7 @@ const About = () => {
   const handleMouseEnter = async () => {
     // rotate the main-card
     animate("#mainCard", {
-      rotateY: "25deg",
+      rotateY: "30deg",
     });
     // for transforming the cards...
     animate(".hidden__Card1", {
