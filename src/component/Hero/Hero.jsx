@@ -62,8 +62,9 @@ const ImageSlider = () => {
         effect={"coverflow"}
         centeredSlides={true}
         loop={true}
-        slidesPerView={"auto"}
+        slidesPerView={1}
         spaceBetween={sliderImageStlye}
+        // loop='true'
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -166,14 +167,14 @@ const Hero = () => {
           >
             <button
               className="subscribeNow__Btn"
-              // aria-description="subscribe-now-button"
+              
             >
               Subscribe Now!
               <img src={subscribeHoverIcon} alt="subscribeHoverIcon" />
             </button>
             <button
               className="moveToNewSec__Btn"
-              // aria-description="move-to-the-next-section-button"
+             
             >
               <img src={DownArrowIcon} alt="downArrowIcon" />
             </button>
@@ -219,6 +220,7 @@ const Hero = () => {
               <img src={SliderImg5} alt="" />
             </label>
           </section>
+          
         </motion.div>
       </div>
     </div>

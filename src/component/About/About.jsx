@@ -51,17 +51,17 @@ const About = () => {
     xPositionC4 = "580%";
     yPositionC4 = "50%";
   } else {
-    xPositionC1 = "-500%";
-    yPositionC1 = "50%";
+    xPositionC1 = "-530%";
+    yPositionC1 = "60%";
 
-    xPositionC2 = "-300%";
+    xPositionC2 = "-330%";
     yPositionC2 = "-50%";
 
-    xPositionC3 = "300%";
+    xPositionC3 = "380%";
     yPositionC3 = "-50%";
 
-    xPositionC4 = "500%";
-    yPositionC4 = "50%";
+    xPositionC4 = "560%";
+    yPositionC4 = "60%";
   }
 
   // for card-two...
