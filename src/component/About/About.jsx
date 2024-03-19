@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.scss";
-import { motion, useAnimate } from "framer-motion";
+import { motion, useAnimate, useAnimation } from "framer-motion";
 
 // Images.....
 import AboutBgImg from "../../assets/images/aboutBg.png";
@@ -15,8 +15,64 @@ import Upwealth1 from "../../assets/images/UPWEALTH1.png";
 import Upwealth2 from "../../assets/images/UPWEALTH2.png";
 import Upwealth3 from "../../assets/images/UPWEALTH3.png";
 
+// const FlipCard = ({ frontImage, backImage, uniqueIndentifire }) => {
+//   const [isFlipped, setIsFlipped] = useState(false);
+
+//   const flipControls = useAnimation();
+
+//   const handleClickToFlip = () => {
+//     setIsFlipped(!isFlipped);
+
+//     flipControls.start({ scale: 1, rotateY: isFlipped ? 0 : 180 });
+//   };
+
+//   return (
+//     <>
+//       <div
+//         style={{
+//           perspective: 1000,
+//         }}
+//         className="hidden__Cards"
+//       >
+//         <motion.div
+//           style={{
+//             rotateY: isFlipped ? 180 : 0,
+//             transformStyle: "preserve-3d",
+//           }}
+//           animate={flipControls}
+//         >
+//           <motion.img
+//             style={{
+//               width: "100%",
+//               height: "100%",
+//               zIndex: isFlipped ? -1 : 1,
+//             }}
+//             className="hidden__Card1"
+//             src={frontImage}
+//             alt="frontImg"
+//           />
+//           <motion.img
+//             style={{
+//               width: "100%",
+//               height: "100%",
+//               zIndex: isFlipped ? 1 : -1,
+//             }}
+//             className="hidden__Card1"
+//             src={backImage}
+//             alt="backImg"
+//           />
+//         </motion.div>
+//       </div>
+//     </>
+//   );
+// };
+
 const About = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [indentifire, setIndentifire] = useState("");
   const [scope, animate] = useAnimate();
+
+  // const flipControls = useAnimate();
 
   const documentPresentWidth = window.innerWidth;
 
@@ -26,8 +82,6 @@ const About = () => {
   let xPositionC3, yPositionC3;
   let xPositionC4, yPositionC4;
 
-  // xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
-  // yPositionC1 = window.innerWidth > 1920 ? '84%' : '50%';
   if (documentPresentWidth >= 1921) {
     xPositionC1 = "-512%";
     yPositionC1 = "84%";
@@ -64,8 +118,7 @@ const About = () => {
 
     xPositionC4 = "560%";
     yPositionC4 = "50%";
-  }
-  else if((documentPresentWidth >=1520)& (documentPresentWidth <=1619)){
+  } else if ((documentPresentWidth >= 1520) & (documentPresentWidth <= 1619)) {
     xPositionC1 = "-580%";
     yPositionC1 = "60%";
 
@@ -77,8 +130,7 @@ const About = () => {
 
     xPositionC4 = "580%";
     yPositionC4 = "60%";
-  }
-  else if((documentPresentWidth >=1420)& (documentPresentWidth <=1519)){
+  } else if ((documentPresentWidth >= 1420) & (documentPresentWidth <= 1519)) {
     xPositionC1 = "-580%";
     yPositionC1 = "60%";
 
@@ -90,8 +142,7 @@ const About = () => {
 
     xPositionC4 = "580%";
     yPositionC4 = "60%";
-  }
-  else if((documentPresentWidth >=1320)&(documentPresentWidth<=1419)){
+  } else if ((documentPresentWidth >= 1320) & (documentPresentWidth <= 1419)) {
     xPositionC1 = "-580%";
     yPositionC1 = "70%";
 
@@ -103,8 +154,7 @@ const About = () => {
 
     xPositionC4 = "580%";
     yPositionC4 = "70%";
-  }
-   else {
+  } else {
     xPositionC1 = "-500%";
     yPositionC1 = "60%";
 
@@ -116,7 +166,7 @@ const About = () => {
 
     xPositionC4 = "560%";
     yPositionC4 = "60%";
-  }  
+  }
 
   const handleMouseEnter = async () => {
     // rotate the main-card
@@ -146,6 +196,15 @@ const About = () => {
     animate(".hidden__Card2", { rotateZ: "-10deg" });
     animate(".hidden__Card3", { rotateZ: "-10deg" });
     animate(".hidden__Card4", { rotateZ: "10deg" });
+  };
+
+  const handleClickToFlip = (e) => {
+    const clickedCardClassName = e.target.className;
+    setIsFlipped(!isFlipped);
+    setIndentifire(clickedCardClassName);
+    animate(`.${clickedCardClassName}`, {
+      rotateY: isFlipped ? 0 : 180,
+    });
   };
 
   return (
@@ -213,31 +272,168 @@ const About = () => {
             src={AboutUsImg}
             alt="AboutBgImg"
           />
+          <div className="hidden__Cards">
+            <motion.div
+              style={{
+                height: "100%",
+                width: "100%",
+                // perspective: 1000,
+              }}
+            >
+              <motion.div
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  // rotateY: isFlipped ? 180 : 0,
+                  // transformStyle: "preserve-3d",
+                }}
+              >
+                <motion.img
+                  initial={{ rotateZ: "20deg" }}
+                  src={
+                    isFlipped || indentifire === "hidden__Card1"
+                      ? SliderImg2
+                      : SliderImg3
+                  }
+                  className="hidden__Card1"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    zIndex: isFlipped ? -1 : 1,
+                  }}
+                  onClick={handleClickToFlip}
+                  alt="hidden-card1"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
 
-          <motion.img
-            initial={{ rotateZ: "20deg" }}
-            src={SliderImg3}
-            className="hidden__Cards hidden__Card1"
-            alt="hidden-card1"
-          />
-          <motion.img
+          <div className="hidden__Cards">
+            <motion.div
+              style={{
+                height: "100%",
+                width: "100%",
+                // perspective: 1000,
+              }}
+            >
+              <motion.div
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  // rotateY: isFlipped ? 180 : 0,
+                  // transformStyle: "preserve-3d",
+                }}
+              >
+                <motion.img
+                  initial={{ rotateZ: "20deg" }}
+                  src={
+                    isFlipped || indentifire === "hidden__Card2"
+                      ? SliderImg2
+                      : SliderImg1
+                  }
+                  className="hidden__Card2"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    zIndex: isFlipped ? -1 : 1,
+                  }}
+                  onClick={handleClickToFlip}
+                  alt="hidden-card2"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* <motion.img
             initial={{ rotateZ: "40deg" }}
             src={SliderImg2}
             className="hidden__Cards hidden__Card2"
             alt="hidden-card2"
-          />
-          <motion.img
+          /> */}
+
+          <div className="hidden__Cards">
+            <motion.div
+              style={{
+                height: "100%",
+                width: "100%",
+                // perspective: 1000,
+              }}
+            >
+              <motion.div
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  // rotateY: isFlipped ? 180 : 0,
+                  // transformStyle: "preserve-3d",
+                }}
+              >
+                <motion.img
+                  initial={{ rotateZ: "20deg" }}
+                  src={
+                    isFlipped || indentifire === "hidden__Card3"
+                      ? SliderImg1
+                      : SliderImg3
+                  }
+                  className="hidden__Card3"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    zIndex: isFlipped ? -1 : 1,
+                  }}
+                  onClick={handleClickToFlip}
+                  alt="hidden-card3"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
+          {/* <motion.img
             initial={{ rotateZ: "-20deg" }}
             src={SliderImg1}
             className="hidden__Cards hidden__Card3"
             alt="hidden-card3"
-          />
-          <motion.img
+          /> */}
+           <div className="hidden__Cards">
+            <motion.div
+              style={{
+                height: "100%",
+                width: "100%",
+                // perspective: 1000,
+              }}
+            >
+              <motion.div
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  // rotateY: isFlipped ? 180 : 0,
+                  // transformStyle: "preserve-3d",
+                }}
+              >
+                <motion.img
+                  initial={{ rotateZ: "20deg" }}
+                  src={
+                    isFlipped || indentifire === "hidden__Card4"
+                      ? SliderImg4
+                      : SliderImg1
+                  }
+                  className="hidden__Card4"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    zIndex: isFlipped ? -1 : 1,
+                  }}
+                  onClick={handleClickToFlip}
+                  alt="hidden-card4"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* <motion.img
             initial={{ rotateZ: "-40deg" }}
             src={SliderImg4}
             className="hidden__Cards hidden__Card4"
             alt="hidden-card4"
-          />
+          /> */}
         </div>
         <motion.div
           initial={{
@@ -287,3 +483,37 @@ const About = () => {
 };
 
 export default About;
+
+{
+  /* <div onClick={handleClickToFlip}>
+        <motion.div
+          style={{
+            perspective: 1000,
+          }}
+        >
+          <motion.div
+            style={{
+              rotateY: isFlipped ? 180 : 0,
+              transformStyle: "preserve-3d",
+            }}
+            animate={flipControls}
+          >
+            <motion.img
+              className="hidden__Cards hidden__Card1"
+              src={frontImage}
+              style={{
+                zIndex: isFlipped ? -1 : 1,
+              }}
+            />
+            <motion.img
+              className="hidden__Cards hidden__Card1"
+              src={backImage}
+              style={{
+                zIndex: isFlipped ? 1 : -1,
+                rotateY: 180,
+              }}
+            />
+          </motion.div>
+        </motion.div>
+      </div> */
+}
