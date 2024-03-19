@@ -95,6 +95,9 @@ const ImageSlider = () => {
           },
           1220:{
             spaceBetween: -450,
+          },
+          1120:{
+            spaceBetween: -450,
           }
         }}
         modules={[EffectCoverflow]}
