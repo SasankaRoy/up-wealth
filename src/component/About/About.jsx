@@ -72,15 +72,13 @@ const About = () => {
   const [indentifire, setIndentifire] = useState("");
   const [scope, animate] = useAnimate();
 
-  // const flipControls = useAnimate();
-
   const documentPresentWidth = window.innerWidth;
 
   // for cards X and Y position...
   let xPositionC1, yPositionC1;
   let xPositionC2, yPositionC2;
   let xPositionC3, yPositionC3;
-  let xPositionC4, yPositionC4;
+  let xPositionC4, yPositionC4; 
 
   if (documentPresentWidth >= 1921) {
     xPositionC1 = "-512%";
@@ -167,6 +165,7 @@ const About = () => {
     xPositionC4 = "560%";
     yPositionC4 = "60%";
   }
+  
 
   const handleMouseEnter = async () => {
     // rotate the main-card
@@ -392,7 +391,7 @@ const About = () => {
             className="hidden__Cards hidden__Card3"
             alt="hidden-card3"
           /> */}
-           <div className="hidden__Cards">
+          <div className="hidden__Cards">
             <motion.div
               style={{
                 height: "100%",

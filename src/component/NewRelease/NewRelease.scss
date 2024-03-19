@@ -186,17 +186,23 @@
           border: none;
           outline: none;
           padding: 15px 20px;
-          border-radius: 4px;
+          border-radius: 8px;
           font-size: 1.6rem;
           font-weight: 700;
           font-family: $fontOne;
           cursor: pointer;
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px #bbd5fc;
+
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), -1px -1px 2px #ffffff,
+            -5px -5px 11.5px #ffffff, 5px 5px 8.5px rgba(0, 0, 0, 0.25);
+            
+          // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px #bbd5fc;
           transition: all 1.3s ease-in-out;
           &:hover {
             transition: all 1.3s ease-in-out;
-            box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.19),
-              inset -5px -5px 10px #bbd5fc;
+            // box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.19),
+            //   inset -5px -5px 10px #bbd5fc;
+            box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25), inset -1px -1px 2px #ffffff,
+            inset -5px -5px 11.5px #ffffff, inset 5px 5px 6.5px rgba(0, 0, 0, 0.25);
           }
         }
         .moveToNewSec__Btn {
@@ -209,13 +215,14 @@
           border-radius: 50%;
           border: none;
           outline: none;
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.19),
-            -10px -10px 20px #bbd5fc;
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px #ffffff;
           transition: all 0.5s ease-in-out;
           cursor: pointer;
           &:hover {
-            box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.19),
-              inset -10px -10px 20px #bbd5fc;
+            // box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.19),
+            //   inset -10px -10px 20px #bbd5fc;
+            box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3),
+              inset -2px -2px 2px #ffffff;
           }
         }
       }

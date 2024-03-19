@@ -3,10 +3,10 @@ import "./App.css";
 import About from "./component/About/About";
 import Hero from "./component/Hero/Hero";
 import Navbar from "./component/Navbar/Navbar";
-// import NewRelease from "./component/NewRelease/NewRelease";
+import NewRelease from "./component/NewRelease/NewRelease";
 // import PreviousEdition from "./component/PreviousEdition/PreviousEdition";
 
-import Slider1 from './assets/images/sliderImg2.1.png'
+import Slider1 from "./assets/images/sliderImg2.1.png";
 
 function App() {
   return (
@@ -14,10 +14,8 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      {/* <NewRelease />
-      <PreviousEdition /> */}
-
-
+      <NewRelease />
+      {/* <PreviousEdition /> */}
     </div>
   );
 }
