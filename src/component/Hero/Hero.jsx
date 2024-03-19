@@ -44,16 +44,16 @@ const ImageSlider = () => {
     }
   };
 
-  let sliderImageStlye;
-  // window.innerWidth>=1920?-850:-600
+  // let sliderImageStlye;
+  // // window.innerWidth>=1920?-850:-600
 
-  if (window.innerWidth >= 1920) {
-    sliderImageStlye = -1000;
-  } else if ((window.innerWidth >= 1025) & (window.innerWidth <= 1919)) {
-    sliderImageStlye = -550;
-  } else {
-    sliderImageStlye = -400;
-  }
+  // if (window.innerWidth >= 1920) {
+  //   sliderImageStlye = -1000;
+  // } else if ((window.innerWidth >= 1025) & (window.innerWidth <= 1919)) {
+  //   sliderImageStlye = -550;
+  // } else {
+  //   sliderImageStlye = -400;
+  // }
 
   return (
     <>
@@ -61,15 +61,41 @@ const ImageSlider = () => {
         ref={swiperRef}
         effect={"coverflow"}
         centeredSlides={true}
-        loop={true}
-        slidesPerView={1}
-        spaceBetween={sliderImageStlye}
-        // loop='true'
+        // loop={true}
+        slidesPerView={"auto"}
+        spaceBetween={-550}
+        loop="true"
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
           depth: 100,
           modifier: 2.5,
+        }}
+        breakpoints={{
+          1920: {
+            spaceBetween: -750,
+          },
+          1820: {
+            spaceBetween: -700,
+          },
+          1720: {
+            spaceBetween: -650,
+          },
+          1620: {
+            spaceBetween: -600,
+          },
+          1520: {
+            spaceBetween: -550,
+          },
+          1420:{
+            spaceBetween: -550,
+          },
+          1320:{
+            spaceBetween: -500,
+          },
+          1220:{
+            spaceBetween: -450,
+          }
         }}
         modules={[EffectCoverflow]}
         className="sliderImgs__Wrapper"
@@ -165,17 +191,11 @@ const Hero = () => {
             }}
             className="subscribeAndArrowBtn__Wrapper"
           >
-            <button
-              className="subscribeNow__Btn"
-              
-            >
+            <button className="subscribeNow__Btn">
               Subscribe Now!
               <img src={subscribeHoverIcon} alt="subscribeHoverIcon" />
             </button>
-            <button
-              className="moveToNewSec__Btn"
-             
-            >
+            <button className="moveToNewSec__Btn">
               <img src={DownArrowIcon} alt="downArrowIcon" />
             </button>
           </motion.div>
@@ -197,7 +217,7 @@ const Hero = () => {
           }}
           className="sliderImgs__mainWrapper"
         >
-          <section id="slider">
+          {/* <section id="slider">
             <input type="radio" name="slider" id="s1" checked />
             <input type="radio" name="slider" id="s2" />
             <input type="radio" name="slider" id="s3" />
@@ -219,8 +239,9 @@ const Hero = () => {
             <label onMouseEnter={handleMoveEnter} for="s5" id="slide5">
               <img src={SliderImg5} alt="" />
             </label>
-          </section>
-          
+          </section> */}
+
+          <ImageSlider />
         </motion.div>
       </div>
     </div>
