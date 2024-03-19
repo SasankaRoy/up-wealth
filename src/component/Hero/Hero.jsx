@@ -1,16 +1,16 @@
 import React, { useRef, useState } from "react";
-import "./Hero.scss";
-// import gsap from "gsap";
-
 import { motion } from "framer-motion";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectCoverflow } from "swiper";
 
+import "./Hero.scss";
+
+// swiper's css files.....
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 
+// Images...
 import DownArrowIcon from "../../assets/images/downArrowIcon.png";
 import subscribeHoverIcon from "../../assets/images/subscribeHoverIcon.png";
 import SliderImg1 from "../../assets/images/sliderImg2.1.png";
@@ -19,7 +19,7 @@ import SliderImg3 from "../../assets/images/sliderImg2.3.png";
 import SliderImg4 from "../../assets/images/sliderImg2.4.png";
 import SliderImg5 from "../../assets/images/sliderImg2.5.png";
 
-import CropedsliderImg2 from "../../assets/images/CropedsliderImg2.1.png";
+// import CropedsliderImg2 from "../../assets/images/CropedsliderImg2.1.png";
 
 SwiperCore.use([EffectCoverflow]);
 
@@ -31,8 +31,7 @@ const ImageSlider = () => {
     SliderImg2,
     SliderImg3,
     SliderImg4,
-    SliderImg5,
-    // SliderImg6,
+    SliderImg5,    
   ];
 
   const handleMoveEnter = () => {
@@ -43,25 +42,12 @@ const ImageSlider = () => {
       swiperRef.current.swiper.slideNext();
     }
   };
-
-  // let sliderImageStlye;
-  // // window.innerWidth>=1920?-850:-600
-
-  // if (window.innerWidth >= 1920) {
-  //   sliderImageStlye = -1000;
-  // } else if ((window.innerWidth >= 1025) & (window.innerWidth <= 1919)) {
-  //   sliderImageStlye = -550;
-  // } else {
-  //   sliderImageStlye = -400;
-  // }
-
   return (
     <>
       <Swiper
         ref={swiperRef}
         effect={"coverflow"}
-        centeredSlides={true}
-        // loop={true}
+        centeredSlides={true}        
         slidesPerView={"auto"}
         spaceBetween={-550}
         loop="true"
@@ -118,7 +104,7 @@ const ImageSlider = () => {
 };
 
 const Hero = () => {
-  const [mouseEnter, setMouseEnter] = useState(false);
+  // const [mouseEnter, setMouseEnter] = useState(false);
   // useEffect(() => {
   //   const textTimeLine = gsap.timeline();
 
@@ -133,10 +119,10 @@ const Hero = () => {
   //   });
   // }, []);
 
-  const handleMoveEnter = () => {
-    // console.log('mouse enter the image cards slider')
-    setMouseEnter(true);
-  };
+  // const handleMoveEnter = () => {
+  //   // console.log('mouse enter the image cards slider')
+  //   setMouseEnter(true);
+  // };
   return (
     <div className="Hero__mainWrapper">
       <div className="Hero__textMainWrapper">

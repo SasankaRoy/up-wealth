@@ -2,6 +2,7 @@ import React from "react";
 import "./About.scss";
 import { motion, useAnimate } from "framer-motion";
 
+// Images.....
 import AboutBgImg from "../../assets/images/aboutBg.png";
 import AboutUsImg from "../../assets/images/aboutUsImg.png";
 import DownArrowIcon from "../../assets/images/downArrowIcon.png";
@@ -10,7 +11,6 @@ import SliderImg1 from "../../assets/images/sliderImg2.png";
 import SliderImg2 from "../../assets/images/sliderImg3.png";
 import SliderImg3 from "../../assets/images/sliderImg5.png";
 import SliderImg4 from "../../assets/images/sliderImg6.png";
-
 import Upwealth1 from "../../assets/images/UPWEALTH1.png";
 import Upwealth2 from "../../assets/images/UPWEALTH2.png";
 import Upwealth3 from "../../assets/images/UPWEALTH3.png";
@@ -18,7 +18,9 @@ import Upwealth3 from "../../assets/images/UPWEALTH3.png";
 const About = () => {
   const [scope, animate] = useAnimate();
 
-  // for card-one...
+  const documentPresentWidth = window.innerWidth;
+
+  // for cards X and Y position...
   let xPositionC1, yPositionC1;
   let xPositionC2, yPositionC2;
   let xPositionC3, yPositionC3;
@@ -26,7 +28,7 @@ const About = () => {
 
   // xPositionC1 = window.innerWidth > 1920 ? '-512%' : '-500%';
   // yPositionC1 = window.innerWidth > 1920 ? '84%' : '50%';
-  if (window.innerWidth >= 1921) {
+  if (documentPresentWidth >= 1921) {
     xPositionC1 = "-512%";
     yPositionC1 = "84%";
 
@@ -38,7 +40,7 @@ const About = () => {
 
     xPositionC4 = "552%";
     yPositionC4 = "84%";
-  } else if ((window.innerWidth >= 1720) & (window.innerWidth <= 1920)) {
+  } else if ((documentPresentWidth >= 1720) & (documentPresentWidth <= 1920)) {
     xPositionC1 = "-560%";
     yPositionC1 = "50%";
 
@@ -50,8 +52,60 @@ const About = () => {
 
     xPositionC4 = "580%";
     yPositionC4 = "50%";
-  } else {
-    xPositionC1 = "-530%";
+  } else if ((documentPresentWidth >= 1620) & (documentPresentWidth <= 1719)) {
+    xPositionC1 = "-540%";
+    yPositionC1 = "50%";
+
+    xPositionC2 = "-360%";
+    yPositionC2 = "-50%";
+
+    xPositionC3 = "420%";
+    yPositionC3 = "-50%";
+
+    xPositionC4 = "560%";
+    yPositionC4 = "50%";
+  }
+  else if((documentPresentWidth >=1520)& (documentPresentWidth <=1619)){
+    xPositionC1 = "-580%";
+    yPositionC1 = "60%";
+
+    xPositionC2 = "-380%";
+    yPositionC2 = "-50%";
+
+    xPositionC3 = "380%";
+    yPositionC3 = "-50%";
+
+    xPositionC4 = "580%";
+    yPositionC4 = "60%";
+  }
+  else if((documentPresentWidth >=1420)& (documentPresentWidth <=1519)){
+    xPositionC1 = "-580%";
+    yPositionC1 = "60%";
+
+    xPositionC2 = "-380%";
+    yPositionC2 = "-50%";
+
+    xPositionC3 = "380%";
+    yPositionC3 = "-50%";
+
+    xPositionC4 = "580%";
+    yPositionC4 = "60%";
+  }
+  else if((documentPresentWidth >=1320)&(documentPresentWidth<=1419)){
+    xPositionC1 = "-580%";
+    yPositionC1 = "70%";
+
+    xPositionC2 = "-380%";
+    yPositionC2 = "-50%";
+
+    xPositionC3 = "400%";
+    yPositionC3 = "-50%";
+
+    xPositionC4 = "580%";
+    yPositionC4 = "70%";
+  }
+   else {
+    xPositionC1 = "-500%";
     yPositionC1 = "60%";
 
     xPositionC2 = "-330%";
@@ -62,19 +116,7 @@ const About = () => {
 
     xPositionC4 = "560%";
     yPositionC4 = "60%";
-  }
-
-  // for card-two...
-  //  xPositionC2 = window.innerWidth > 1920 ? -560 : -300;
-  //  yPositionC2 = window.innerWidth > 1920 ? -55 : -100;
-
-  // for card-three...
-  // const xPositionC3 = window.innerWidth > 1920 ? 645 : 300;
-  // const yPositionC3 = window.innerWidth > 1920 ? -55 : -100;
-
-  // for card-four...
-  // const xPositionC4 = window.innerWidth > 1920 ? 960 : 550;
-  // const yPositionC4 = window.innerWidth > 1920 ? 224 : 50;
+  }  
 
   const handleMouseEnter = async () => {
     // rotate the main-card
