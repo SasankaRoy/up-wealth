@@ -15,6 +15,11 @@ import Upwealth1 from "../../assets/images/UPWEALTH1.png";
 import Upwealth2 from "../../assets/images/UPWEALTH2.png";
 import Upwealth3 from "../../assets/images/UPWEALTH3.png";
 
+import flipCard1 from '../../assets/images/flipCard1.png'
+import flipCard2 from '../../assets/images/flipCard2.png'
+import flipCard3 from '../../assets/images/flipCard3.png'
+import flipCard4 from '../../assets/images/flipCard4.png'
+
 // const FlipCard = ({ frontImage, backImage, uniqueIndentifire }) => {
 //   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -278,7 +283,7 @@ const About = () => {
             <div className="flip-card-inner">
               <div className="flip-card-front">
                 <motion.img
-                  src={SliderImg3}
+                  src={SliderImg2}
                   alt="Avatar"
                   className=""
                   style={{ width: "100%", height: "100%" }}
@@ -286,7 +291,7 @@ const About = () => {
               </div>
               <div className="flip-card-back">
                 <motion.img
-                  src={SliderImg2}
+                  src={flipCard1}
                   alt="Avatar"
                   className=""
                   style={{ width: "100%", height: "100%" }}
@@ -353,7 +358,7 @@ const About = () => {
               </div>
               <div className="flip-card-back">
                 <motion.img
-                  src={SliderImg1}
+                  src={flipCard2}
                   alt="Avatar"
                   className=""
                   style={{ width: "100%", height: "100%" }}
@@ -420,7 +425,7 @@ const About = () => {
               </div>
               <div className="flip-card-back">
                 <motion.img
-                  src={SliderImg2}
+                  src={flipCard3}
                   alt="Avatar"
                   className=""
                   style={{ width: "100%", height: "100%" }}
@@ -484,7 +489,7 @@ const About = () => {
               </div>
               <div className="flip-card-back">
                 <motion.img
-                  src={SliderImg1}
+                  src={flipCard4}
                   alt="Avatar"
                   className=""
                   style={{ width: "100%", height: "100%" }}

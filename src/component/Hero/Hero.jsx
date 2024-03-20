@@ -59,31 +59,31 @@ const ImageSlider = () => {
         }}
         breakpoints={{
           1920: {
-            spaceBetween: -750,
-          },
-          1820: {
-            spaceBetween: -700,
-          },
-          1720: {
             spaceBetween: -650,
           },
-          1620: {
+          1820: {
             spaceBetween: -600,
           },
-          1520: {
+          1720: {
             spaceBetween: -550,
           },
-          1420:{
-            spaceBetween: -550,
-          },
-          1320:{
+          1620: {
             spaceBetween: -500,
           },
-          1220:{
+          1520: {
+            spaceBetween: -500,
+          },
+          1420:{
             spaceBetween: -450,
           },
+          1320:{
+            spaceBetween: -430,
+          },
+          1220:{
+            spaceBetween: -400,
+          },
           1120:{
-            spaceBetween: -450,
+            spaceBetween: -370,
           }
         }}
         modules={[EffectCoverflow]}
