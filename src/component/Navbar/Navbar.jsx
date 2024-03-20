@@ -35,6 +35,7 @@ const Navbar = () => {
       style={{
         backgroundColor: screenPositionY >= 5 ? "#f0f0f3" : "transparent",
         boxShadow: screenPositionY >= 5 ? "1px 1px 10px rgba(0, 0, 0, 0.2)" : "none",
+        transition:' .3s ease-in-out'
       }}
     >
       <div className="Navbar__mainWrapper">
