@@ -14,10 +14,10 @@
 }
 
 @keyframes borderAnimation {
-  0%{
-   transform: rotate(0deg); 
+  0% {
+    transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(460deg);
   }
 }
@@ -25,10 +25,18 @@
 .NewRelease__containerWrapper {
   position: relative;
   height: 100dvh;
+  
+  // background: rgb(240, 240, 243);
+  // background: linear-gradient(
+  //   144deg,
+  //   rgba(240, 240, 243, 1) 59%,
+  //   rgba(174, 206, 255, 1) 100%
+  // );
+
   background: rgb(240, 240, 243);
   background: linear-gradient(
-    144deg,
-    rgba(240, 240, 243, 1) 59%,
+    155deg,
+    rgba(240, 240, 243, 1) 37%,
     rgba(174, 206, 255, 1) 100%
   );
 
@@ -38,10 +46,8 @@
     left: 0;
     top: 28%;
     width: 100%;
-    z-index: 1;       
+    z-index: 1;
   }
-
-
 
   // content-main div...
   .NewRelease__contentMainWrapper {
@@ -63,20 +69,34 @@
       .NewRelease__ImageWrapper {
         position: relative;
         width: 45%;
-        
+
         img {
           position: relative;
           z-index: 10;
           width: 100%;
-          border:.5rem solid;          
-          border-image: conic-gradient(from -90deg, rgba(168, 239, 255, 0.9), rgba(168, 239, 255, .9) 0.1turn, rgba(168, 239, 255, 1) 0.15turn, rgba(168, 239, 255, 0.1) 0.25turn) 30;
+          border: 0.5rem solid;
+          border-image: conic-gradient(
+              from -90deg,
+              rgba(168, 239, 255, 0.9),
+              rgba(168, 239, 255, 0.9) 0.1turn,
+              rgba(168, 239, 255, 1) 0.15turn,
+              rgba(168, 239, 255, 0.1) 0.25turn
+            )
+            30;
         }
-      
+
         &::before {
+          // background: linear-gradient(
+          //   103deg,
+          //   rgba(255, 181, 183, 1) 26%,
+          //   rgba(255, 84, 86, 1) 56%
+          // );
+
+          background: rgb(255, 181, 183);
           background: linear-gradient(
-            103deg,
-            rgba(255, 181, 183, 1) 26%,
-            rgba(255, 84, 86, 1) 56%
+            90deg,
+            rgba(255, 181, 183, 1) 13%,
+            rgba(255, 84, 86, 1) 100%
           );
           border-radius: 15px;
           position: absolute;
@@ -208,17 +228,17 @@
           font-family: $fontOne;
           cursor: pointer;
 
-          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), -1px -1px 2px #ffffff,
-            -5px -5px 11.5px #ffffff, 5px 5px 8.5px rgba(0, 0, 0, 0.25);
-            
+          box-shadow: 1px 1px 2px #6897e2, -1px -1px 2px #ffffff,
+            -5px -5px 11.5px #ffffff, 5px 5px 8.5px #6897e2;
+
           // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px #bbd5fc;
           transition: all 1.3s ease-in-out;
           &:hover {
             transition: all 1.3s ease-in-out;
             // box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.19),
             //   inset -5px -5px 10px #bbd5fc;
-            box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25), inset -1px -1px 2px #ffffff,
-            inset -5px -5px 11.5px #ffffff, inset 5px 5px 6.5px rgba(0, 0, 0, 0.25);
+            box-shadow: inset 1px 1px 2px #6897e2, inset -1px -1px 2px #ffffff,
+              inset -5px -5px 11.5px #ffffff, inset 5px 5px 6.5px #6897e2;
           }
         }
         .moveToNewSec__Btn {
@@ -231,14 +251,18 @@
           border-radius: 50%;
           border: none;
           outline: none;
-          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px #ffffff;
+          box-shadow: 1px 1px 2px #6897e2, -1px -1px 2px #ffffff,
+            -1px -1px 11.5px #ffffff, 5px 5px 8.5px #6897e2;
           transition: all 0.5s ease-in-out;
           cursor: pointer;
           &:hover {
             // box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.19),
             //   inset -10px -10px 20px #bbd5fc;
-            box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3),
-              inset -2px -2px 2px #ffffff;
+
+            //   box-shadow:inset 1px 1px 2px #6897E2, inset -1px -1px 2px #ffffff,
+            // inset -1px -1px 3.5px #ffffff, inset 5px 5px 3.5px #6897E2;
+
+            box-shadow: inset 2px 2px 2px #6897e2, inset -2px -2px 2px #ffffff;
           }
         }
       }

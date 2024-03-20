@@ -69,7 +69,7 @@ const NewRelease = () => {
             </p>
           </div>
           <div className="NewRelease__buttonWrapper">
-            <button class="NewRelease__subscribeUpwealth">
+            <button className="NewRelease__subscribeUpwealth">
               Subscribe to Upwealth!
             </button>
             <button
