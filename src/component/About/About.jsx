@@ -68,8 +68,8 @@ import Upwealth3 from "../../assets/images/UPWEALTH3.png";
 // };
 
 const About = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [indentifire, setIndentifire] = useState("");
+  // const [isFlipped, setIsFlipped] = useState(false);
+  // const [indentifire, setIndentifire] = useState("");
   const [scope, animate] = useAnimate();
 
   const documentPresentWidth = window.innerWidth;
@@ -78,7 +78,7 @@ const About = () => {
   let xPositionC1, yPositionC1;
   let xPositionC2, yPositionC2;
   let xPositionC3, yPositionC3;
-  let xPositionC4, yPositionC4; 
+  let xPositionC4, yPositionC4;
 
   if (documentPresentWidth >= 1921) {
     xPositionC1 = "-512%";
@@ -165,7 +165,6 @@ const About = () => {
     xPositionC4 = "560%";
     yPositionC4 = "60%";
   }
-  
 
   const handleMouseEnter = async () => {
     // rotate the main-card
@@ -197,14 +196,14 @@ const About = () => {
     animate(".hidden__Card4", { rotateZ: "10deg" });
   };
 
-  const handleClickToFlip = (e) => {
-    const clickedCardClassName = e.target.className;
-    setIsFlipped(!isFlipped);
-    setIndentifire(clickedCardClassName);
-    animate(`.${clickedCardClassName}`, {
-      rotateY: isFlipped ? 0 : 180,
-    });
-  };
+  // const handleClickToFlip = (e) => {
+  //   const clickedCardClassName = e.target.className;
+  //   setIsFlipped(!isFlipped);
+  //   setIndentifire(clickedCardClassName);
+  //   animate(`.${clickedCardClassName}`, {
+  //     rotateY: isFlipped ? 0 : 180,
+  //   });
+  // };
 
   return (
     <div className="About__mainWrapper">
@@ -271,43 +270,39 @@ const About = () => {
             src={AboutUsImg}
             alt="AboutBgImg"
           />
-          <div className="hidden__Cards">
-            <motion.div
-              style={{
-                height: "100%",
-                width: "100%",
-                // perspective: 1000,
-              }}
-            >
-              <motion.div
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  // rotateY: isFlipped ? 180 : 0,
-                  // transformStyle: "preserve-3d",
-                }}
-              >
-                <motion.img
-                  initial={{ rotateZ: "20deg" }}
-                  src={
-                    isFlipped || indentifire === "hidden__Card1"
-                      ? SliderImg2
-                      : SliderImg3
-                  }
-                  className="hidden__Card1"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    zIndex: isFlipped ? -1 : 1,
-                  }}
-                  onClick={handleClickToFlip}
-                  alt="hidden-card1"
-                />
-              </motion.div>
-            </motion.div>
-          </div>
 
-          <div className="hidden__Cards">
+          <motion.div
+            initial={{ rotateZ: "40deg" }}
+            className="flip-card hidden__Card1"
+          >
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <motion.img
+                  src={SliderImg3}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <div className="flip-card-back">
+                <motion.img
+                  src={SliderImg2}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* <motion.img
+            initial={{ rotateZ: "40deg" }}
+            src={SliderImg3}
+            className="hidden__Cards hidden__Card1"
+            alt="hidden-card1"
+          /> */}
+
+          {/* <div className="hidden__Cards">
             <motion.div
               style={{
                 height: "100%",
@@ -341,7 +336,31 @@ const About = () => {
                 />
               </motion.div>
             </motion.div>
-          </div>
+          </div> */}
+
+          <motion.div
+            initial={{ rotateZ: "40deg" }}
+            className="flip-card hidden__Card2"
+          >
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <motion.img
+                  src={SliderImg3}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <div className="flip-card-back">
+                <motion.img
+                  src={SliderImg1}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+            </div>
+          </motion.div>
 
           {/* <motion.img
             initial={{ rotateZ: "40deg" }}
@@ -350,7 +369,7 @@ const About = () => {
             alt="hidden-card2"
           /> */}
 
-          <div className="hidden__Cards">
+          {/* <div className="hidden__Cards">
             <motion.div
               style={{
                 height: "100%",
@@ -384,14 +403,40 @@ const About = () => {
                 />
               </motion.div>
             </motion.div>
-          </div>
+          </div> */}
+
+          <motion.div
+            className="flip-card hidden__Card3"
+            initial={{ rotateZ: "-20deg" }}
+          >
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <motion.img
+                  src={SliderImg1}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <div className="flip-card-back">
+                <motion.img
+                  src={SliderImg2}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+            </div>
+          </motion.div>
+
           {/* <motion.img
             initial={{ rotateZ: "-20deg" }}
             src={SliderImg1}
             className="hidden__Cards hidden__Card3"
             alt="hidden-card3"
           /> */}
-          <div className="hidden__Cards">
+
+          {/* <div className="hidden__Cards">
             <motion.div
               style={{
                 height: "100%",
@@ -425,7 +470,28 @@ const About = () => {
                 />
               </motion.div>
             </motion.div>
-          </div>
+          </div> */}
+
+          <motion.div initial={{ rotateZ: "-40deg" }}  className="flip-card hidden__Card4">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <motion.img
+                  src={SliderImg4}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <div className="flip-card-back">
+                <motion.img
+                  src={SliderImg1}
+                  alt="Avatar"
+                  className=""
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+            </div>
+          </motion.div>
 
           {/* <motion.img
             initial={{ rotateZ: "-40deg" }}

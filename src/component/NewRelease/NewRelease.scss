@@ -13,6 +13,15 @@
   }
 }
 
+@keyframes borderAnimation {
+  0%{
+   transform: rotate(0deg); 
+  }
+  100%{
+    transform: rotate(460deg);
+  }
+}
+
 .NewRelease__containerWrapper {
   position: relative;
   height: 100dvh;
@@ -50,12 +59,15 @@
       .NewRelease__ImageWrapper {
         position: relative;
         width: 45%;
+        
         img {
           position: relative;
           z-index: 10;
           width: 100%;
-          border: 3px solid red;
+          border:.5rem solid;          
+          border-image: conic-gradient(from -90deg, rgba(168, 239, 255, 0.9), rgba(168, 239, 255, .9) 0.1turn, rgba(168, 239, 255, 1) 0.15turn, rgba(168, 239, 255, 0.1) 0.25turn) 30;
         }
+      
         &::before {
           background: linear-gradient(
             103deg,
