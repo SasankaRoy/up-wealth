@@ -70,13 +70,20 @@
           outline: none;
           border-radius: 10px;
           cursor: pointer;
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
-            -10px -10px 20px rgba(255, 255, 255, 0.4);
+          // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
+          //   -10px -10px 20px rgba(255, 255, 255, 0.4);
+
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), -1px -1px 2px #ffffff,
+            -5px -5px 11.5px #ffffff, 5px 5px 8.5px rgba(0, 0, 0, 0.25);
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2),
-              inset -10px -10px 20px rgba(255, 255, 255, 0.4);
+            // box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+            //   inset -10px -10px 20px rgba(255, 255, 255, 0.4);
+
+            box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25),
+              inset -1px -1px 2px #ffffff, inset -5px -5px 11.5px #ffffff,
+              inset 5px 5px 6.5px rgba(0, 0, 0, 0.25);
           }
         }
       }
@@ -133,7 +140,11 @@
         justify-content: center;
         align-items: center;
         // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        box-shadow: 10px 10px 20px #e2e2e4, -10px -10px 20px #ffffff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px #ffffff;
+        &::hover {
+          box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3),
+            inset -2px -2px 2px #ffffff;
+        }
       }
 
       .navigationArrowBtns:disabled {
@@ -144,8 +155,8 @@
 
     .PreviousEdition__nextSectionBtnWrapper {
       display: flex;
-      justify-content:center;
-      align-items:center;
+      justify-content: center;
+      align-items: center;
       margin-top: 10px;
       .moveToNewSec__Btn {
         display: flex;
@@ -156,12 +167,12 @@
         border-radius: 50%;
         border: none;
         outline: none;
-        box-shadow: 10px 10px 20px #e2e2e4, -10px -10px 20px #ffffff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px #ffffff;
         transition: all 0.5s ease-in-out;
         cursor: pointer;
         &:hover {
-          box-shadow: inset 10px 10px 20px #e2e2e4,
-            inset -10px -10px 20px #ffffff;
+          box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3),
+            inset -2px -2px 2px #ffffff;
         }
       }
     }
