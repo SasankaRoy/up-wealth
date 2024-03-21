@@ -86,41 +86,41 @@ const About = () => {
   let xPositionC4, yPositionC4;
 
   if (documentPresentWidth >= 1921) {
-    xPositionC1 = "-512%";
+    xPositionC1 = "-620%";
     yPositionC1 = "84%";
+
+    xPositionC2 = "-360%";
+    yPositionC2 = "-65%";
+
+    xPositionC3 = "400%";
+    yPositionC3 = "-70%";
+
+    xPositionC4 = "650%";
+    yPositionC4 = "84%";
+  } else if ((documentPresentWidth >= 1720) & (documentPresentWidth <= 1920)) {
+    xPositionC1 = "-620%";
+    yPositionC1 = "90%";
+
+    xPositionC2 = "-420%";
+    yPositionC2 = "-35%";
+
+    xPositionC3 = "440%";
+    yPositionC3 = "-50%";
+
+    xPositionC4 = "660%";
+    yPositionC4 = "90%";
+  } else if ((documentPresentWidth >= 1620) & (documentPresentWidth <= 1719)) {
+    xPositionC1 = "-600%";
+    yPositionC1 = "85%";
 
     xPositionC2 = "-360%";
     yPositionC2 = "-55%";
 
-    xPositionC3 = "300%";
-    yPositionC3 = "-70%";
-
-    xPositionC4 = "552%";
-    yPositionC4 = "84%";
-  } else if ((documentPresentWidth >= 1720) & (documentPresentWidth <= 1920)) {
-    xPositionC1 = "-560%";
-    yPositionC1 = "50%";
-
-    xPositionC2 = "-360%";
-    yPositionC2 = "-50%";
-
-    xPositionC3 = "450%";
-    yPositionC3 = "-50%";
-
-    xPositionC4 = "580%";
-    yPositionC4 = "50%";
-  } else if ((documentPresentWidth >= 1620) & (documentPresentWidth <= 1719)) {
-    xPositionC1 = "-540%";
-    yPositionC1 = "50%";
-
-    xPositionC2 = "-360%";
-    yPositionC2 = "-50%";
-
     xPositionC3 = "420%";
-    yPositionC3 = "-50%";
+    yPositionC3 = "-55%";
 
-    xPositionC4 = "560%";
-    yPositionC4 = "50%";
+    xPositionC4 = "630%";
+    yPositionC4 = "85%";
   } else if ((documentPresentWidth >= 1520) & (documentPresentWidth <= 1619)) {
     xPositionC1 = "-580%";
     yPositionC1 = "60%";
@@ -134,29 +134,29 @@ const About = () => {
     xPositionC4 = "580%";
     yPositionC4 = "60%";
   } else if ((documentPresentWidth >= 1420) & (documentPresentWidth <= 1519)) {
-    xPositionC1 = "-580%";
+    xPositionC1 = "-500%";
     yPositionC1 = "60%";
 
-    xPositionC2 = "-380%";
+    xPositionC2 = "-310%";
     yPositionC2 = "-50%";
 
-    xPositionC3 = "380%";
+    xPositionC3 = "310%";
     yPositionC3 = "-50%";
 
-    xPositionC4 = "580%";
+    xPositionC4 = "500%";
     yPositionC4 = "60%";
   } else if ((documentPresentWidth >= 1320) & (documentPresentWidth <= 1419)) {
-    xPositionC1 = "-580%";
-    yPositionC1 = "70%";
+    xPositionC1 = "-500%";
+    yPositionC1 = "80%";
 
-    xPositionC2 = "-380%";
+    xPositionC2 = "-330%";
     yPositionC2 = "-50%";
 
     xPositionC3 = "400%";
     yPositionC3 = "-50%";
 
     xPositionC4 = "580%";
-    yPositionC4 = "70%";
+    yPositionC4 = "80%";
   } else {
     xPositionC1 = "-500%";
     yPositionC1 = "60%";
@@ -294,7 +294,7 @@ const About = () => {
                   src={flipCard1}
                   alt="Avatar"
                   className=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%",objectFit:'cover' }}
                 />
               </div>
             </div>
@@ -353,7 +353,7 @@ const About = () => {
                   src={SliderImg3}
                   alt="Avatar"
                   className=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%",objectFit:'cover' }}
                 />
               </div>
               <div className="flip-card-back">
@@ -361,7 +361,7 @@ const About = () => {
                   src={flipCard2}
                   alt="Avatar"
                   className=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%",objectFit:'cover' }}
                 />
               </div>
             </div>
@@ -420,7 +420,7 @@ const About = () => {
                   src={SliderImg1}
                   alt="Avatar"
                   className=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%",objectFit:'cover' }}
                 />
               </div>
               <div className="flip-card-back">
@@ -428,7 +428,7 @@ const About = () => {
                   src={flipCard3}
                   alt="Avatar"
                   className=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%",objectFit:'cover' }}
                 />
               </div>
             </div>
@@ -484,7 +484,7 @@ const About = () => {
                   src={SliderImg4}
                   alt="Avatar"
                   className=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%",objectFit:'cover' }}
                 />
               </div>
               <div className="flip-card-back">
@@ -492,7 +492,7 @@ const About = () => {
                   src={flipCard4}
                   alt="Avatar"
                   className=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%",objectFit:'cover' }}
                 />
               </div>
             </div>

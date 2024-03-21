@@ -59,8 +59,8 @@
 
       .flip-card {
         background-color: transparent;
-        width: 80px;
-        height: 100px;
+        width: 98px;
+        height: 134px;
         perspective: 1000px;
         
         position: absolute;
@@ -108,8 +108,7 @@
       }
       
     }
-    .About__contextMainWrapper {
-      
+    .About__contextMainWrapper {      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -192,7 +191,7 @@
 
 
 
-@media (max-width: 1921px) {
+@media (max-width: 1920px) {
   .About__mainWrapper {
     // background-color: cyan;
     .About__BgUpwealth1{
@@ -200,21 +199,21 @@
       left: 35%;
       top: 15%;
       z-index: 1;
-      width: 550px;    
+      width: 570px;    
     }
     .About__BgUpwealth2{
       position: absolute;
       left: 35%;
       top: 30%;
       z-index: 1;
-      width: 550px;    
+      width: 570px;    
     }
     .About__BgUpwealth3{
       position: absolute;
       left: 35%;
       top: 45%;
       z-index: 50;
-      width: 550px;    
+      width: 570px;    
     }
     .About__contentMainWrapper {
       // image wrapper
@@ -228,7 +227,7 @@
       }
       // content wrapper
       .About__contextMainWrapper {
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        width: 88%;
 
         .About__contentWrapper {
           padding: 25px;
@@ -236,10 +235,10 @@
           .About__contentLeftWrapper {
             flex: 1;
             h3 {
-              font-size: 3.1rem;
+              font-size: 3rem;
             }
             h2 {
-              font-size: 4.5rem;
+              font-size: 4.3rem;
             }
             img {
               height: 220px;
@@ -265,9 +264,31 @@
     }
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   .About__mainWrapper {
-    // background-color: pink;
+    // background-color: green;
+
+    .About__BgUpwealth1{
+      position: absolute;
+      left: 35%;
+      top: 15%;
+      z-index: 1;
+      width: 570px;    
+    }
+    .About__BgUpwealth2{
+      position: absolute;
+      left: 35%;
+      top: 30%;
+      z-index: 1;
+      width: 570px;    
+    }
+    .About__BgUpwealth3{
+      position: absolute;
+      left: 35%;
+      top: 45%;
+      z-index: 50;
+      width: 570px;    
+    }
     .About__contentMainWrapper {
       // image wrapper
       .AboutUs__imgWrapper {
@@ -280,7 +301,7 @@
       }
       // content wrapper
       .About__contextMainWrapper {
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        width: 87%;
 
         .About__contentWrapper {
           padding: 25px;
@@ -288,10 +309,10 @@
           .About__contentLeftWrapper {
             flex: 1;
             h3 {
-              font-size: 3rem;
+              font-size: 2.8rem;
             }
             h2 {
-              font-size: 5rem;
+              font-size: 4.4rem;
             }
             img {
               height: 250px;
@@ -301,7 +322,7 @@
             flex: 2;
             padding: 25px;
             p {
-              font-size: 2rem;
+              font-size: 1.9rem;
               line-height: 3.3rem;
             }
           }
@@ -322,11 +343,38 @@
   .About__mainWrapper {
     // background-color: red;
 
+    .About__BgUpwealth1{
+      position: absolute;
+      left: 33%;
+      top: 15%;
+      z-index: 1;
+      width: 550px;    
+    }
+    .About__BgUpwealth2{
+      position: absolute;
+      left: 33%;
+      top: 30%;
+      z-index: 1;
+      width: 550px;    
+    }
+    .About__BgUpwealth3{
+      position: absolute;
+      left: 33%;
+      top: 45%;
+      z-index: 50;
+      width: 550px;    
+    }
+
     .About__contentMainWrapper {
       // image wrapper
       .AboutUs__imgWrapper {
         #mainCard {
           width: 200px;
+        }
+        .flip-card {
+          background-color: transparent;
+          width: 87px;
+          height: 110px;
         }
         .hidden__Cards {
           width: 120px;
@@ -334,7 +382,7 @@
       }
       // content wrapper
       .About__contextMainWrapper {
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        width: 85%;
 
         .About__contentWrapper {
           padding: 25px;
@@ -342,10 +390,10 @@
           .About__contentLeftWrapper {
             flex: 1;
             h3 {
-              font-size: 2.6rem;
+              font-size: 2.3rem;
             }
             h2 {
-              font-size: 4rem;
+              font-size: 3.7rem;
             }
             img {
               height: 200px;
@@ -355,16 +403,16 @@
             flex: 2;
             padding: 30px;
             p {
-              font-size: 1.8rem;
+              font-size: 1.6rem;
               line-height: 2.4rem;
             }
           }
         }
         .moveToNewSec__Btn {
-          width: 55px;
-          height: 55px;
+          width: 50px;
+          height: 50px;
           img {
-            width: 24px;
+            width: 18px;
           }
         }
       }
@@ -378,21 +426,21 @@
     // background-color:blue;
     .About__BgUpwealth1{
       position: absolute;
-      left: 35%;
+      left: 31%;
       top: 15%;
       z-index: 1;
       width: 500px;    
     }
     .About__BgUpwealth2{
       position: absolute;
-      left: 35%;
+      left: 31%;
       top: 30%;
       z-index: 1;
       width: 500px;    
     }
     .About__BgUpwealth3{
       position: absolute;
-      left: 35%;
+      left: 31%;
       top: 45%;
       z-index: 50;
       width: 500px;    
@@ -408,9 +456,10 @@
           width: 80px;
         }
       }
+      
       // content wrapper
       .About__contextMainWrapper {
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        width: 90%;
 
         .About__contentWrapper {
           padding: 25px;
@@ -418,20 +467,20 @@
           .About__contentLeftWrapper {
             flex: 1;
             h3 {
-              font-size: 2.7rem;
+              font-size: 2.2rem;
             }
             h2 {
-              font-size: 3.5rem;
+              font-size: 3.3rem;
             }
             img {
-              height: 185px;
+              height: 180px;
             }
           }
           .About__contentRightWrapper {
             flex: 2;
             padding: 30px;
             p {
-              font-size: 1.6rem;
+              font-size: 1.5rem;
               line-height: 2.3rem;
             }
           }
@@ -451,7 +500,7 @@
 
 @media(max-width:1320px){
   .About__mainWrapper {
-    // background-color: green;
+    background-color: green;
 
     .About__contentMainWrapper {
       // image wrapper
