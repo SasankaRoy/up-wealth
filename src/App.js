@@ -10,6 +10,10 @@ import Slider1 from "./assets/images/sliderImg2.1.png";
 
 function App() {
   return (
+    <>
+    <head>
+      <title>Upwealth magazine</title>
+    </head>
     <div className="App">
       <Navbar />
       <Hero />
@@ -17,6 +21,7 @@ function App() {
       <NewRelease />
       <PreviousEdition /> */}
     </div>
+    </>
   );
 }
 

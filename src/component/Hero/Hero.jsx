@@ -49,7 +49,7 @@ const ImageSlider = () => {
         effect={"coverflow"}
         centeredSlides={true}        
         slidesPerView={"auto"}
-        spaceBetween={-650}
+        spaceBetween={-750}
         loop="true"
         coverflowEffect={{
           rotate: 0,
@@ -59,7 +59,7 @@ const ImageSlider = () => {
         }}
         breakpoints={{          
           1920: {
-            spaceBetween: -750,
+            spaceBetween: -690,
           },
           1820: {
             spaceBetween: -670,
@@ -71,19 +71,22 @@ const ImageSlider = () => {
             spaceBetween: -600,
           },
           1520: {
-            spaceBetween: -580,
+            spaceBetween: -520,
           },
           1420:{
             spaceBetween: -520,
           },
           1320:{
-            spaceBetween: -500,
+            spaceBetween: -450,
           },
           1220:{
             spaceBetween: -430,
           },
           1120:{
-            spaceBetween: -420,
+            spaceBetween: -410,
+          },
+          1020:{
+            spaceBetween: -400,
           }
         }}
         modules={[EffectCoverflow]}
