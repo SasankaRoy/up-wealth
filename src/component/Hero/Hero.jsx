@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef} from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectCoverflow } from "swiper";
@@ -26,12 +26,24 @@ SwiperCore.use([EffectCoverflow]);
 const ImageSlider = () => {
   const swiperRef = useRef(null);
 
+  useEffect(() => {
+    const autoSlider = () => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.slideNext();
+      }
+    };
+    const sliderInerval = setInterval(autoSlider,2000);
+
+
+    return ()=> clearInterval(sliderInerval);
+  }, []);
+
   const sliderImageList = [
     SliderImg1,
     SliderImg2,
     SliderImg3,
     SliderImg4,
-    SliderImg5,    
+    SliderImg5,
   ];
 
   const handleMoveEnter = () => {
@@ -47,7 +59,7 @@ const ImageSlider = () => {
       <Swiper
         ref={swiperRef}
         effect={"coverflow"}
-        centeredSlides={true}        
+        centeredSlides={true}
         slidesPerView={"auto"}
         spaceBetween={-750}
         loop="true"
@@ -57,7 +69,7 @@ const ImageSlider = () => {
           depth: 100,
           modifier: 2.5,
         }}
-        breakpoints={{          
+        breakpoints={{
           1920: {
             spaceBetween: -690,
           },
@@ -73,25 +85,24 @@ const ImageSlider = () => {
           1520: {
             spaceBetween: -520,
           },
-          1420:{
+          1420: {
             spaceBetween: -520,
           },
-          1320:{
+          1320: {
             spaceBetween: -450,
           },
-          1220:{
+          1220: {
             spaceBetween: -430,
           },
-          1120:{
+          1120: {
             spaceBetween: -410,
           },
-          1020:{
+          1020: {
             spaceBetween: -400,
-          }
+          },
         }}
         modules={[EffectCoverflow]}
         className="sliderImgs__Wrapper"
-        
       >
         {sliderImageList.map((cur, id) => (
           <SwiperSlide
@@ -129,49 +140,76 @@ const Hero = () => {
   // };
   return (
     <div className="Hero__mainWrapper">
-    <div className="Hero__mainContentWrapper">
-      <div className="Hero__textMainWrapper">
-        <div className="Hero__textWrapper">
-          <motion.h1
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            whileInView={{
-              y: 0,
-              opacity: 1,
-            }}
-            transition={{
-              duration: 1.3,
-              ease: "backOut",
-            }}
-            id="Hero__heading"
-          >
-            Discover the latest issue of{" "}
-            <span className="upwealth__textColor">upwealth</span>{" "}
-            <span className="magazine__textColor">magazine</span>
-          </motion.h1>
-          <motion.p
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            whileInView={{
-              y: 0,
-              opacity: 1,
-            }}
-            transition={{
-              duration: 1.3,
-              ease: "backOut",
-            }}
-            className="small__informationPara"
-          >
-            Stay informed with our insightful articles and expert advice.
-          </motion.p>
+      <div className="Hero__mainContentWrapper">
+        <div className="Hero__textMainWrapper">
+          <div className="Hero__textWrapper">
+            <motion.h1
+              initial={{
+                y: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.3,
+                ease: "backOut",
+              }}
+              id="Hero__heading"
+            >
+              Discover the latest issue of{" "}
+              <span className="upwealth__textColor">upwealth</span>{" "}
+              <span className="magazine__textColor">magazine</span>
+            </motion.h1>
+            <motion.p
+              initial={{
+                y: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.3,
+                ease: "backOut",
+              }}
+              className="small__informationPara"
+            >
+              Stay informed with our insightful articles and expert advice.
+            </motion.p>
 
+            <motion.div
+              initial={{
+                y: -50,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.3,
+                ease: "backOut",
+                damping: 300,
+              }}
+              className="subscribeAndArrowBtn__Wrapper"
+            >
+              <button className="subscribeNow__Btn">
+                Subscribe Now!
+                <img src={subscribeHoverIcon} alt="subscribeHoverIcon" />
+              </button>
+              <button className="moveToNewSec__Btn">
+                <img src={DownArrowIcon} alt="downArrowIcon" />
+              </button>
+            </motion.div>
+          </div>
+        </div>
+        <div className="Hero__sliderMainWrapper">
           <motion.div
             initial={{
-              y: -50,
+              y: 100,
               opacity: 0,
             }}
             whileInView={{
@@ -181,37 +219,10 @@ const Hero = () => {
             transition={{
               duration: 1.3,
               ease: "backOut",
-              damping: 300,
             }}
-            className="subscribeAndArrowBtn__Wrapper"
+            className="sliderImgs__mainWrapper"
           >
-            <button className="subscribeNow__Btn">
-              Subscribe Now!
-              <img src={subscribeHoverIcon} alt="subscribeHoverIcon" />
-            </button>
-            <button className="moveToNewSec__Btn">
-              <img src={DownArrowIcon} alt="downArrowIcon" />
-            </button>
-          </motion.div>
-        </div>
-      </div>
-      <div className="Hero__sliderMainWrapper">
-        <motion.div
-          initial={{
-            y: 100,
-            opacity: 0,
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1.3,
-            ease: "backOut",
-          }}
-          className="sliderImgs__mainWrapper"
-        >
-          {/* <section id="slider">
+            {/* <section id="slider">
             <input type="radio" name="slider" id="s1" checked />
             <input type="radio" name="slider" id="s2" />
             <input type="radio" name="slider" id="s3" />
@@ -235,9 +246,9 @@ const Hero = () => {
             </label>
           </section> */}
 
-          <ImageSlider />
-        </motion.div>
-      </div>
+            <ImageSlider />
+          </motion.div>
+        </div>
       </div>
     </div>
   );
