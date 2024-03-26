@@ -2,7 +2,7 @@
 
 .Navbar__outerWrapper {
   width: 100dvw;
-  padding: 20px 10px;
+  padding: 5px;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
     margin: 0 auto;
     .Navbar__LogoWrapper {
       img {
-        width: 160px;
+        width: 150px;
         height: auto;
       }
     }
@@ -79,7 +79,7 @@
   .Navbar__mainWrapper {
     // max-width: 1720px;
     // background: green;
-    padding: 30px 0px;
+    padding: 22px 0px;
 
     .Navbar__LogoWrapper {
       img {

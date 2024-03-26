@@ -17,8 +17,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      {/* <About />
-      <NewRelease />
+      <About />
+      {/* <NewRelease />
       <PreviousEdition /> */}
     </div>
     </>
