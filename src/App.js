@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <About />
+      {/* <About />
       <NewRelease />
-      <PreviousEdition />
+      <PreviousEdition /> */}
     </div>
   );
 }

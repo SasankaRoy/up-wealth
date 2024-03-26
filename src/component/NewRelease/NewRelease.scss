@@ -119,6 +119,8 @@
     }
     .NewRelease__textContentWrapper {
       flex: 1;
+      width: 60%;
+      background-color: red;
       .NewRelease__subTitle {
         font-size: 3.1rem;
         font-weight: 500;
@@ -132,13 +134,13 @@
         background-clip: text;
       }
       .NewRelease__title {
-        font-size: 5rem;
+        font-size: 3rem;
         font-family: $fontOne;
         font-weight: bold;
       }
       .NewRelease__infoWrapper {
         width: 60%;
-        margin-top: 75px;
+        // margin-top: 75px;
         padding: 30px;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.19) 3px 3px 10px, -3px -3px 10px #f3f3f1;

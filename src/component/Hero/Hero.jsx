@@ -49,7 +49,7 @@ const ImageSlider = () => {
         effect={"coverflow"}
         centeredSlides={true}        
         slidesPerView={"auto"}
-        spaceBetween={-550}
+        spaceBetween={-650}
         loop="true"
         coverflowEffect={{
           rotate: 0,
@@ -57,7 +57,7 @@ const ImageSlider = () => {
           depth: 100,
           modifier: 2.5,
         }}
-        breakpoints={{
+        breakpoints={{          
           1920: {
             spaceBetween: -650,
           },
@@ -68,7 +68,7 @@ const ImageSlider = () => {
             spaceBetween: -550,
           },
           1620: {
-            spaceBetween: -500,
+            spaceBetween: -600,
           },
           1520: {
             spaceBetween: -500,
@@ -88,6 +88,7 @@ const ImageSlider = () => {
         }}
         modules={[EffectCoverflow]}
         className="sliderImgs__Wrapper"
+        
       >
         {sliderImageList.map((cur, id) => (
           <SwiperSlide
@@ -125,6 +126,7 @@ const Hero = () => {
   // };
   return (
     <div className="Hero__mainWrapper">
+    <div className="Hero__mainContentWrapper">
       <div className="Hero__textMainWrapper">
         <div className="Hero__textWrapper">
           <motion.h1
@@ -232,6 +234,7 @@ const Hero = () => {
 
           <ImageSlider />
         </motion.div>
+      </div>
       </div>
     </div>
   );
