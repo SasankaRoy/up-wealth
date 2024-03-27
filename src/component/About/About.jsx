@@ -126,26 +126,26 @@ const About = () => {
     animate(".hidden__Card1", {
       // x: xPositionC1,
       // y: yPositionC1,
-      x: '-570%',
-      y: '85%',
+      x: "-570%",
+      y: "85%",
     });
     animate(".hidden__Card2", {
       // x: xPositionC2,
       // y: yPositionC2,
-      x: '-400%',
-      y: '-100%',
+      x: "-400%",
+      y: "-100%",
     });
     animate(".hidden__Card3", {
       // x: xPositionC3,
       // y: yPositionC3,
-      x: '400%',
-      y: '-100%',
+      x: "400%",
+      y: "-100%",
     });
     await animate(".hidden__Card4", {
       // x: xPositionC4,
       // y: yPositionC4,
-      x:'570%',
-      y: '85%',
+      x: "570%",
+      y: "85%",
     });
 
     // for rotate the cards...
@@ -176,6 +176,32 @@ const About = () => {
             className="About__BgImg"
             src={AboutBgImg}
             alt="about__bgImg"
+          />
+
+          <motion.img
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: .8, ease: "backOut" }}
+            src={Upwealth1}
+            alt="upwealth1-text"
+            className="About__BgUpwealth1"
+          />
+
+          <motion.img
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.8, delay: 1.4, ease: "backOut" }}
+            src={Upwealth2}
+            alt="upwealth1-text"
+            className="About__BgUpwealth2"
+          />
+          <motion.img
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 2.2, delay: 1.8, ease: "backOut" }}
+            src={Upwealth3}
+            alt="upwealth1-text"
+            className="About__BgUpwealth3"
           />
           <div className="About__imageAndContentWrapper">
             <div ref={scope} className="About__imageWrapper">
