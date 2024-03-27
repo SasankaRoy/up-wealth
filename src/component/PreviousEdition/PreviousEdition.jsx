@@ -63,7 +63,7 @@ const PreviousEdition = () => {
                             <div className="image-slider-container">
                                 {images.slice(startIndex, startIndex + 4).map((image, index) => (
                                     <div key={index} className="image-card">
-                                        <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: .8, ease: 'backIn', delay: .7 }} src={image} alt={`Image ${startIndex + index}`} />
+                                        <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: .8, ease: 'backIn', }} src={image} alt={`Image ${startIndex + index}`} />
                                     </div>
                                 ))}
                             </div>

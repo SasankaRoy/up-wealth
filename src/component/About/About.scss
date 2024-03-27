@@ -24,19 +24,19 @@
       transform: translate(-10%, -10%);
     }
 
-    .About__BgUpwealth1{
+    .About__BgUpwealth1 {
       position: absolute;
       width: 37%;
       top: 20%;
       left: 32%;
     }
-    .About__BgUpwealth2{
+    .About__BgUpwealth2 {
       position: absolute;
       width: 37%;
       top: 36%;
       left: 32%;
     }
-    .About__BgUpwealth3{
+    .About__BgUpwealth3 {
       position: absolute;
       width: 37%;
       top: 53%;
@@ -52,6 +52,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 0;
       .About__imageWrapper {
         height: 65%;
         width: 97%;
@@ -172,12 +173,15 @@
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px #ffffff;
           transition: 0.5s ease-in-out;
           cursor: pointer;
-          &:hover { 
+          &:hover {
             box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3),
               inset -2px -2px 2px #ffffff;
           }
         }
       }
+    }
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }
@@ -188,19 +192,19 @@
       max-width: 1720px;
       // background-color: red;
 
-      .About__BgUpwealth1{
+      .About__BgUpwealth1 {
         position: absolute;
         width: 35%;
         top: 20%;
         left: 32%;
       }
-      .About__BgUpwealth2{
+      .About__BgUpwealth2 {
         position: absolute;
         width: 35%;
         top: 37%;
         left: 32%;
       }
-      .About__BgUpwealth3{
+      .About__BgUpwealth3 {
         position: absolute;
         width: 35%;
         top: 55%;
@@ -269,25 +273,24 @@
       max-width: 1520px;
       // background-color: red;
 
-      .About__BgUpwealth1{
+      .About__BgUpwealth1 {
         position: absolute;
         width: 35%;
         top: 20%;
         left: 32%;
       }
-      .About__BgUpwealth2{
+      .About__BgUpwealth2 {
         position: absolute;
         width: 35%;
         top: 38%;
         left: 32%;
       }
-      .About__BgUpwealth3{
+      .About__BgUpwealth3 {
         position: absolute;
         width: 35%;
         top: 56%;
         left: 32%;
       }
-    
 
       .About__imageAndContentWrapper {
         .About__imageWrapper {
@@ -350,7 +353,6 @@
     .About__mainWrapper {
       max-width: 1320px;
       // background-color: red;
-    
 
       .About__imageAndContentWrapper {
         .About__imageWrapper {
@@ -414,25 +416,24 @@
       max-width: 1120px;
       // background-color: red;
 
-      .About__BgUpwealth1{
+      .About__BgUpwealth1 {
         position: absolute;
         width: 35%;
         top: 20%;
         left: 32%;
       }
-      .About__BgUpwealth2{
+      .About__BgUpwealth2 {
         position: absolute;
         width: 35%;
         top: 37%;
         left: 32%;
       }
-      .About__BgUpwealth3{
+      .About__BgUpwealth3 {
         position: absolute;
         width: 35%;
         top: 54%;
         left: 32%;
       }
-    
 
       .About__imageAndContentWrapper {
         .About__imageWrapper {

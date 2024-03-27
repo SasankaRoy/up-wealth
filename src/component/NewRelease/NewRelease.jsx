@@ -56,10 +56,12 @@ const NewRelease = () => {
           className="NewRelease__textContentWrapper"
         >
           <h3 className="NewRelease__subTitle">New Release</h3>
-          <h2 className="NewRelease__title">
-            This is the place to start or continue to grow and scale your
-            business!
-          </h2>
+          <div className="NewRelase__titleWrapper">
+            <h2 className="NewRelease__title">
+              This is the place to start or continue to grow and scale your
+              business!
+            </h2>
+          </div>
 
           <div className="NewRelease__infoWrapper">
             <p>“If your heart is in your dream, no request is too extreme”</p>

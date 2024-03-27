@@ -181,7 +181,7 @@ const About = () => {
           <motion.img
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: .8, ease: "backOut" }}
+            transition={{ duration: 1, delay: 0.8, ease: "backOut" }}
             src={Upwealth1}
             alt="upwealth1-text"
             className="About__BgUpwealth1"
@@ -349,7 +349,12 @@ const About = () => {
                 </div>
               </motion.div>
             </div>
-            <div className="About__mainContentWrapper">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "backOut", delay: 1 }}
+              className="About__mainContentWrapper"
+            >
               <div className="About__contentWrapper">
                 <div className="About__titleAndSubtitleWrapper">
                   <h3>About us</h3>
@@ -380,7 +385,7 @@ const About = () => {
               >
                 <img src={DownArrowIcon} alt="downArrowIcon" />
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

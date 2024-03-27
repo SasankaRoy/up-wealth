@@ -18,8 +18,8 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      {/* <NewRelease />
-      <PreviousEdition /> */}
+      <NewRelease />
+      <PreviousEdition />
     </div>
     </>
   );
