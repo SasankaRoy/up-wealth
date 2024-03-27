@@ -116,7 +116,7 @@
         }
       }
       .About__mainContentWrapper {
-        height: 32%;
+        height: 35%;
         width: 97%;
         display: flex;
         flex-direction: column;
@@ -170,6 +170,7 @@
           border-radius: 50%;
           border: none;
           outline: none;
+          margin: 2px 0;
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px #ffffff;
           transition: 0.5s ease-in-out;
           cursor: pointer;
@@ -182,6 +183,87 @@
     }
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+}
+
+@media (max-width:2120px) {
+  .About__wrapper {
+    .About__mainWrapper {
+      max-width: 1720px;
+      
+
+      .About__BgUpwealth1 {
+        position: absolute;
+        width: 35%;
+        top: 20%;
+        left: 32%;
+      }
+      .About__BgUpwealth2 {
+        position: absolute;
+        width: 35%;
+        top: 37%;
+        left: 32%;
+      }
+      .About__BgUpwealth3 {
+        position: absolute;
+        width: 35%;
+        top: 55%;
+        left: 32%;
+      }
+
+      .About__imageAndContentWrapper {
+        .About__imageWrapper {
+          #mainCard {
+            width: 18%;
+          }
+
+          .flip-card {
+            background-color: transparent;
+            width: 110px;
+            height: 130px;
+          }
+        }
+        .About__mainContentWrapper {
+          height: 35%;
+          padding: 10px;
+
+          .About__contentWrapper {
+            .About__titleAndSubtitleWrapper {
+              width: 40%;
+              // background-color: teal;
+              h3 {
+                font-size: 2.6rem;
+              }
+              h2 {
+                font-size: 5.5rem;
+              }
+            }
+            .About__titleSperator {
+              img {
+                height: 200px;
+              }
+            }
+            .About__shortInfoWrapper {
+              width: 55%;
+              // background-color: cyan;
+              p {
+                font-size: 2rem;
+                font-family: $fontOne;
+                font-weight: 400;
+              }
+            }
+          }
+          .moveToNewSec__Btn {
+            width: 43px;
+            height: 43px;
+            img {
+              height: 23px;
+              width: 22px;
+            }
+          }
+        }
+      }
     }
   }
 }
