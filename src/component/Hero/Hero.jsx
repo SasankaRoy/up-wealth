@@ -49,9 +49,6 @@ const ImageSlider = () => {
   const handleMoveEnter = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
-      swiperRef.current.swiper.slideNext();
-      swiperRef.current.swiper.slideNext();
-      swiperRef.current.swiper.slideNext();
     }
   };
   return (
@@ -61,13 +58,13 @@ const ImageSlider = () => {
         effect={"coverflow"}
         centeredSlides={true}
         slidesPerView={"auto"}
-        spaceBetween={-750}
+        spaceBetween={-750}        
         loop="true"
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
-          modifier: 2.5,
+          depth: 500,
+          modifier: 1.3,
         }}
         breakpoints={{
           1920: {
