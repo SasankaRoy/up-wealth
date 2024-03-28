@@ -120,7 +120,7 @@ const About = () => {
   const handleMouseEnter = async () => {
     // rotate the main-card
     animate("#mainCard", {
-      rotateY: "30deg",
+      rotateY: "-33deg",
     });
     // for transforming the cards...
     animate(".hidden__Card1", {
@@ -204,7 +204,7 @@ const About = () => {
             className="About__BgUpwealth3"
           />
           <div className="About__imageAndContentWrapper">
-            <div ref={scope} className="About__imageWrapper">
+            <div ref={scope}  className="About__imageWrapper">
               <motion.img
                 id="mainCard"
                 initial={{

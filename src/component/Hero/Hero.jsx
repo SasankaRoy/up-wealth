@@ -62,7 +62,7 @@ const ImageSlider = () => {
         loop="true"
         coverflowEffect={{
           rotate: 0,
-          stretch: 0,
+          stretch: 0, 
           depth: 500,
           modifier: 1.3,
         }}

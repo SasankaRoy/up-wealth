@@ -60,6 +60,7 @@
         justify-content: center;
         align-items: flex-end;
         position: relative;
+        perspective: 1000px;
         // background: pink;
 
         #mainCard {
@@ -272,7 +273,7 @@
   .About__wrapper {
     .About__mainWrapper {
       max-width: 1720px;
-      // background-color: red;
+      // background-color: green;
 
       .About__BgUpwealth1 {
         position: absolute;
@@ -377,7 +378,7 @@
       .About__imageAndContentWrapper {
         .About__imageWrapper {
           #mainCard {
-            width: 17%;
+            width: 19%;
           }
 
           .flip-card {
@@ -434,12 +435,12 @@
   .About__wrapper {
     .About__mainWrapper {
       max-width: 1320px;
-      // background-color: red;
+      // background-color: pink;
 
       .About__imageAndContentWrapper {
         .About__imageWrapper {
           #mainCard {
-            width: 16%;
+            width: 18%;
           }
 
           .flip-card {
@@ -496,7 +497,7 @@
   .About__wrapper {
     .About__mainWrapper {
       max-width: 1120px;
-      // background-color: red;
+      // background-color: yellow;
 
       .About__BgUpwealth1 {
         position: absolute;
@@ -520,7 +521,7 @@
       .About__imageAndContentWrapper {
         .About__imageWrapper {
           #mainCard {
-            width: 18%;
+            width: 17%;
           }
 
           .flip-card {

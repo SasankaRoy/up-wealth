@@ -7,6 +7,7 @@ import NewRelease from "./component/NewRelease/NewRelease";
 import PreviousEdition from "./component/PreviousEdition/PreviousEdition";
 
 import Slider1 from "./assets/images/sliderImg2.1.png";
+import { ContactUs } from "./component/contact/ContactUs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <About />
       <NewRelease />
       <PreviousEdition />
+      <ContactUs />
     </div>
     </>
   );
