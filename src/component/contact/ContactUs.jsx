@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useAnimate } from "framer-motion";
+import { useAnimate,motion } from "framer-motion";
 import "./ContactUs.scss";
 
 export const ContactUs = () => {
   const [scope, animate] = useAnimate();
-    const [animateOnce,setAnimateOnce] = useState(false);
+  const [animateOnce, setAnimateOnce] = useState(false);
 
   const firstBgColors = ["#C5DAFF", "#C5DAFF", "#F0F0F3"];
   const timings = [0.1, 0.5, 1];
@@ -141,6 +141,7 @@ export const ContactUs = () => {
       { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
+
     // for the big "P"....
 
     animate(
@@ -210,7 +211,7 @@ export const ContactUs = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY >= 2533;
-      if (!scrollPosition || animateOnce) {        
+      if (!scrollPosition || animateOnce) {
         onPageLoadAnimtion();
       }
     };
@@ -218,12 +219,14 @@ export const ContactUs = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-     window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <>
       <div className="Contact__outerWrapper">
+        {/* grid div start */}
         <div ref={scope} className="Contact__BgGridWrapper">
           {Array(155)
             .join()
@@ -235,6 +238,44 @@ export const ContactUs = () => {
                 className="Contact__gridChildDiv"
               />
             ))}
+        </div>
+        {/* grid div end */}
+
+        <div className="Contact__wrapper">
+          <motion.div initial={{opacity:0,y:200}} whileInView={{opacity:1,y:0}} transition={{duration:.8,ease:'backOut',delay:1.5}} className='Contact__mainWrapper'>
+            <h2 className="Contact__titleH2">Contact our friendly team</h2>
+            <p className="Contact__smallPara">Let us know how we can help</p>
+            
+            <div className="Contact__InputMainWrapper">
+                <div className="Contact__InputsWrapper">
+                    <div>
+                        <input className="" placeholder="First Name" />
+                    </div>
+                    <div>
+                        <input className="" placeholder="Last Name" />
+                    </div>
+                </div>
+
+                <div className="Contact__InputsWrapper">
+                    <div>
+                        <input className="" placeholder="Phone number" />
+                    </div>
+                    <div>
+                        <input className="" placeholder="Email ID" />
+                    </div>
+                </div>
+
+                <div className="Contact__textAreaWrapper">
+                    <textarea rows='7' placeholder="Message"></textarea>
+                </div>
+
+
+                <div className="Contact__submitBtnWrapper">
+                    <button>Submit</button>
+                </div>
+
+            </div>
+          </motion.div>
         </div>
       </div>
     </>
