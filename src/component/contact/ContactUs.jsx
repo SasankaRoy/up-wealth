@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
-import { motion, useAnimate } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useAnimate } from "framer-motion";
 import "./ContactUs.scss";
 
 export const ContactUs = () => {
   const [scope, animate] = useAnimate();
+    const [animateOnce,setAnimateOnce] = useState(false);
+
   const firstBgColors = ["#C5DAFF", "#C5DAFF", "#F0F0F3"];
   const timings = [0.1, 0.5, 1];
+
   const onPageLoadAnimtion = async () => {
     const minValue = 20;
     const maxValue = 150;
@@ -71,71 +74,71 @@ export const ContactUs = () => {
     // for the big "U" ...
     animate(
       "#gridTile_43",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
       "#gridTile_63",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
       "#gridTile_83",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
       "#gridTile_103",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
     animate(
       "#gridTile_123",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
-        "#gridTile_124",
-        { backgroundColor: 'red' },
-        { duration: 0.8, times: timings }
-      );
+      "#gridTile_124",
+      { backgroundColor: firstBgColors },
+      { duration: 0.8, times: timings }
+    );
 
     animate(
       "#gridTile_125",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
       "#gridTile_106",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
     animate(
       "#gridTile_126",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
       "#gridTile_86",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
       "#gridTile_66",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
 
     animate(
       "#gridTile_46",
-      { backgroundColor: 'red' },
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
     // for the big "P"....
@@ -176,7 +179,12 @@ export const ContactUs = () => {
       { duration: 0.8, times: timings }
     );
     animate(
-      "#gridTile_70",
+      "#gridTile_51",
+      { backgroundColor: firstBgColors },
+      { duration: 0.8, times: timings }
+    );
+    animate(
+      "#gridTile_71",
       { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
@@ -186,14 +194,32 @@ export const ContactUs = () => {
       { duration: 0.8, times: timings }
     );
     animate(
+      "#gridTile_91",
+      { backgroundColor: firstBgColors },
+      { duration: 0.8, times: timings }
+    );
+    animate(
       "#gridTile_89",
-      { backgroundColor:firstBgColors},
+      { backgroundColor: firstBgColors },
       { duration: 0.8, times: timings }
     );
   };
 
   useEffect(() => {
     onPageLoadAnimtion();
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY >= 2533;
+      if (!scrollPosition || animateOnce) {        
+        onPageLoadAnimtion();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+     window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   return (
     <>
